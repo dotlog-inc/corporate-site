@@ -93,7 +93,7 @@ export default function Home() {
             width={16}
             height={16}
           />
-          Go to nextjs.org →　大野
+          Go to nextjs.org →　大野 ジュンペイ
         </a>
       </footer>
     </div>
