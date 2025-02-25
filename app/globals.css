@@ -1,8 +1,65 @@
+ html,body{
+  max-width: 1120px;
+  width: 100%;
+  margin: 0 auto;
+ }
+ /* フィロソフィー */
+ #philo{
+
+ }
+ .container h1{
+  font-size: 50px;
+  padding: 10px;
+ }
  .box{
   width: 650px;
-  border: solid 3px #000;
+  border: solid 3px #000000;
   border-radius: 20px;
  }
+ .box h2{
+  font-size: 30px;
+ }
+ .philos {
+  position: relative;
+  height: 1000px;
+ }
+ .philo-1 h3{
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: (-50%,-50%);
+ }
+ .philo-1 p{
+  position: absolute;
+  top: 10%;
+  left: 20%;
+  transform: (-50%,-50%);
+ }
+ .philo-2 h3{
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: (-50%,-50%);
+ }
+ .philo-2 p{
+  position: absolute;
+  top: 40%;
+  left: 20%;
+  transform: (-50%,-50%);
+ }
+ .philo-3 h3{
+  position: absolute;
+  top: 70%;
+  left: 52%;
+  transform: (-50%,-50%);
+ }
+ .title h3{
+  font-size:15px;
+ }
+ .title p {
+  font-size: 45px;
+ }
+ /*
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -20,7 +77,7 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
-
+*/
 @font-face {
   font-family: 'A1ゴシック B JIS2004';
   src:  url('/fonts/A1GothicB-JIS2004.woff2') format('woff2'),
