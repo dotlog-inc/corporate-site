@@ -2,8 +2,8 @@ import Image from "next/image";
 import Link from "next/link" ;
 
 export default function Home() {
-  return (
-      <>
+  return(
+    <>
         <header className="sticky top-0 flex">
           <h1 className="text-blue-300 inline-block text-2xl mx-6 my-4">Dot Log inc.</h1>
           <ul className="inline-block text-blue-300 ml-auto">
@@ -27,7 +27,7 @@ export default function Home() {
                     width={185}
                     height={47}
                 />
-                <h1 className="text-white text-2xl.">株式会社ドットログ</h1>
+                <h1 className="text-white text-2xl">株式会社ドットログ</h1>
                 <div className="text-white">OUR MISSION</div>
                 <div className="text-white">今日よりちょっとやさしい明日を。</div>
             </div>
@@ -109,6 +109,7 @@ export default function Home() {
             </ul>
             <div className="text-white">©Dot Log inc.</div>
           </div>
+          </footer>
     </>
-      
-}
+    );
+  }
