@@ -14,26 +14,61 @@
  }
  /* フィロソフィー */
  #philo{
-  
+  background: linear-gradient(var(--g-angle), var(--g-color-0) var(--g-position-0), var(--g-color-1) var(--g-position-1));
+  --g-color-0: #d7f0ff;
+  --g-position-0: 0%;
+  --g-color-1: #ffdcdc;
+  --g-position-1: 100%;
+  --g-color-2: #ffdcdc;
+  --g-position-2: 100%;
+  --g-color-3: #ffdcdc;
+  --g-position-3: 100%;
+  --g-color-4: #ffdcdc;
+  --g-position-4: 100%;
+  --g-color-5: #ffdcdc;
+  --g-position-5: 100%;
+  --g-color-6: #ffdcdc;
+  --g-position-6: 100%;
+  --g-color-7: #ffdcdc;
+  --g-position-7: 100%;
+  --g-color-8: #ffdcdc;
+  --g-position-8: 100%;
+  --g-color-9: #ffdcdc;
+  --g-position-9: 100%;
+  --g-color-10: #ffdcdc;
+  --g-position-10: 100%;
+  --g-color-11: #ffdcdc;
+  --g-position-11: 100%;
+  --g-angle: 135deg;
  }
- .container h1{
-  font-size: 50px;
-  text-align: center;
+ h1 {
+  color: #444444;
+  font-size: 48px; 
+  font-weight: 600;
+  font-style: normal;
+  margin: -40px 0px 100px 0;
+  max-width: 100%;
+  font-family: var(--s-font-178fa961);
+  letter-spacing: 0.1em;
+  line-height: 1.6;
  }
+ 
  .box{
-  width: 90%;
-  height: 20%;
-  border: solid 3px #000000;
-  border-radius: 50px;
+  width: 85%;
+  height: 50%;
+  border: solid 3px #b0a7a7;
+  border-radius: 30px;
   margin:0 auto;
+  background-color: #ffffff;
  }
  .box h2{
-  font-size: 6vw;
+  font-size: 5vw;
   padding-left: 20px;
   padding-top: 10px;
+  font-weight: bold;
  }
  .box p {
-  font-size: 3vw;
+  font-size: 2vw;
   padding:10px 25px;
   line-height: 40px;
  }
@@ -48,7 +83,7 @@
 }
 .philo-1 p {
   font-size: 40px;
-  margin-top: 10px;
+  margin: 13px 0 15px;
 }
 .philo-2 {
   text-align: center;
@@ -61,32 +96,64 @@
 }
 .philo-2 p {
   font-size: 40px;
-  margin-top: 10px;
+  margin: 13px 0 15px;
 }
 .philo-3 {
   text-align: center;
   margin: 0 auto;
   padding-top: 200px;
+  padding-bottom: 30px;
 }
- /*
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+.philo-3 h3 {
+  font-size: 20px;
+  margin: 0 0 40px;
 }
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+  padding: 0 24px;
+}
+.box2 {
+  width: calc(50% - 48px);
+  max-width: calc(50% - 48px);
+  height: 165px;
+  border-radius: 10px;
+  background-color: #ffffff;
+  box-shadow: 30px 40px 30px rgba(0, 0, 0, 0.1);
+  flex-direction: column;
+  padding: 24px;
+  text-align: left;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  margin: 0 24px 48px;
+  display: flex;
+  justify-content: space-between;
+}
+.text {
+  font-size: 32px;
+}
+@media (max-width: 768px) {
+  .box2 {
+    width: 100%; /* 幅を100%にして縦並びに変更 */
+    max-width: 100%;
+    height: auto; /* 高さを自動調整 */
   }
 }
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+@font-face {
+  font-family: 'A1ゴシック L JIS2004';
+  src: url('/path/to/your/font-file.woff2') format('woff2'),
+       url('/path/to/your/font-file.woff') format('woff'),
+       url('/path/to/your/font-file.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
-*/
+:root {
+  --s-font-178fa961: 'A1ゴシック L JIS2004', sans-serif;
+}
+
+
 
 @font-face {
   font-family: 'A1ゴシック B JIS2004';

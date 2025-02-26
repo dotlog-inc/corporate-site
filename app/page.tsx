@@ -36,7 +36,7 @@ export default function Home() {
                 </div>
             </div>
           </div>
-      <section id="philo" className="container">
+          <section id="philo" className="flex flex-col items-center">
           <h1>PHILOSOPHY</h1>
           <div className="box">
            <h2>Dot Log</h2>
@@ -56,13 +56,13 @@ export default function Home() {
           <div className="philo-3 title">
             <h3>VALUE</h3>
               {/* 四つの図入れる */}
-              <div className="">
-                <ul className="flex">
-                  <li>縁<p>relationship すべての「人、モノ、コト」とのご縁を大切にし、常に助け合いの精神で取り組む。</p></li>
-                  <li>冒険<p>adventure 我々は常にわくわくする方を選び、挑戦を忘れない”アド”ベンチャー企業です。</p></li>
-                  <li>自然<p>nature 自然を大切にし、自然を楽しみ、自然と遊ぶ。
+              <div className="flex">
+                <ul>
+                  <li className="four-chart box2"><p className="text">縁</p><p className="text-base">relationship</p><p className="text-sm"> すべての「人、モノ、コト」とのご縁を大切にし、常に助け合いの精神で取り組む。</p></li>
+                  <li className="four-chart box2"><p className="text">冒険</p><p className="text-base">adventure</p><p className="text-sm"> 我々は常にわくわくする方を選び、挑戦を忘れない”アド”ベンチャー企業です。</p></li>
+                  <li className="four-chart box2"><p className="text">自然</p><p className="text-base">nature</p><p className="text-sm"> 自然を大切にし、自然を楽しみ、自然と遊ぶ。
                   自分らしく、自然体でいきていく。</p></li>
-                  <li>貢献<p>contribution 常に誰かのために行動し、社会に貢献し続けます。</p></li>
+                  <li className="four-chart box2"><p className="text">貢献</p><p className="text-base">contribution</p><p className="text-sm"> 常に誰かのために行動し、社会に貢献し続けます。</p></li>
                 </ul>
               </div>
           </div>
@@ -123,7 +123,7 @@ export default function Home() {
             </div>
             <div className="text-white font-black">©Dot Log inc.</div>
           </div>
-        </footer>
-    </Fragment>
-  );
+    </footer>
+  </Fragment>
+  )    
 }
