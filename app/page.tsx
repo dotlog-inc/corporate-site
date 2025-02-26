@@ -34,7 +34,7 @@ export default function Home() {
         <section id="philo" className="container">
           <h1>PHILOSOPHY</h1>
           <div className="box">
-           <h2>Dot Log</h2>
+          <h2>Dot Log</h2>
             <p>企業名の『Dot Log』とは、あるプログラミング言語においてメッセージを出力するために使用される"console.log()"から由来しており、（）の中に入力されたものがスマートフォンやパソコンに出力（表示）されます。<br></br>
               私たちは、わくわくする世界を創るためのアイデアを思いつく限り（　）の中に入れ、世界にどんどん出力していくというミッションを掲げ、日々取り組んでおります。</p>
           </div>
