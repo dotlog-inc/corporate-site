@@ -1,24 +1,25 @@
 import Image from "next/image";
 import Link from "next/link" ;
+import { Fragment } from "react";
 
 export default function Home() {
   return (
-      <>
-        <header className="sticky top-0 flex">
-          <h1 className="text-blue-300 inline-block text-2xl mx-6 my-4">Dot Log inc.</h1>
-          <ul className="inline-block text-blue-300 ml-auto">
-            <li className="text-base inline-block px-3">TOP</li>
-            <li className="text-base inline-block px-3">PHILOSOPHY</li>
-            <li className="text-base inline-block px-3">SERVICE</li>
-            <li className="text-base inline-block px-3">NEWS</li>
-            <li className="text-base inline-block px-3">ABOUT</li>
-            <li className="text-base inline-block px-3">CONTACT</li>
-          </ul>
+    <Fragment>
+        <header className="sticky top-0 flex mx-6">
+          <h1 className="text-sky-500 font-[1000] inline-block text-2xl my-4">Dot Log inc.</h1>
+          <div className="inline-block font-black text-sky-500 ml-auto">
+            <Link href="" className="text-base inline-block px-3 py-4">TOP</Link>
+            <Link href="" className="text-base inline-block px-3 py-4">PHILOSOPHY</Link>
+            <Link href="" className="text-base inline-block px-3 py-4">SERVICE</Link>
+            <Link href="" className="text-base inline-block px-3 py-4">NEWS</Link>
+            <Link href="" className="text-base inline-block px-3 py-4">ABOUT</Link>
+            <Link href="" className="text-base inline-block px-3 py-4">CONTACT</Link>
+          </div>
         </header>
         <main>
           <div>
             <div
-              className="bg-cover bg-center h-[500px] flex flex-col items-center  mx-8 my-8 rounded-3xl"
+              className="bg-cover bg-center h-[500px] flex flex-col items-center  mx-8 my-8 rounded-3xl pt-[96px] px-[48px] pb-[72px]"
               style={{backgroundImage: 'url(/waterImage.jpg)', }}
             >
                 <Image
@@ -26,10 +27,13 @@ export default function Home() {
                     alt="Sample Image"
                     width={185}
                     height={47}
+                    className=""
                 />
-                <h1 className="text-white text-2xl.">株式会社ドットログ</h1>
-                <div className="text-white">OUR MISSION</div>
-                <div className="text-white">今日よりちょっとやさしい明日を。</div>
+                <h1 className="text-white text-xl.">株式会社ドットログ</h1>
+                <div className="font-black">
+                  <div className="text-white text-2xl">OUR MISSION</div>
+                  <div className="text-white text-5xl">今日よりちょっと<br></br>やさしい明日を。</div>
+                </div>
             </div>
           </div>
           <section id="philo" className="flex flex-col items-center">
@@ -39,16 +43,15 @@ export default function Home() {
             <p>企業名の『Dot Log』とは、あるプログラミング言語においてメッセージを出力するために使用される"console.log()"から由来しており、（）の中に入力されたものがスマートフォンやパソコンに出力（表示）されます。<br></br>
               私たちは、わくわくする世界を創るためのアイデアを思いつく限り（　）の中に入れ、世界にどんどん出力していくというミッションを掲げ、日々取り組んでおります。</p>
           </div>
-          <div className="philos">
+        <div className="philos">
           <div className="philo-1 title"> 
               <h3>VISION</h3>
               <p>迷ったら、わくわくするほうへ。</p>
           </div>
-
           <div className="philo-2 title"> 
             <h3>MISSION</h3>
-             <p>今日よりちょっと優しい明日を</p>
-           </div> 
+            <p>今日よりちょっと優しい明日を</p>
+          </div> 
 
           <div className="philo-3 title">
             <h3>VALUE</h3>
@@ -63,7 +66,7 @@ export default function Home() {
                 </ul>
               </div>
           </div>
-          </div>
+        </div>
       </section>
 
 
@@ -100,25 +103,28 @@ export default function Home() {
           
         </main>
         <footer >
-          <div className="bg-black flex flex-col items-center" >
-            <Image
-                src="/dotlogImage.png"
-                alt="Sample Image"
-                width={200}
-                height={100}
-                
-            />
-            <ul>
-              <li className="text-white inline-block text-xl px-3">トップ</li>
-              <li className="text-white inline-block text-xl px-3">理念</li>
-              <li className="text-white inline-block text-xl px-3">事業内容</li>
-              <li className="text-white inline-block text-xl px-3">ニュース</li>
-              <li className="text-white inline-block text-xl px-3">会社概要</li>
-              <li className="text-white inline-block text-xl px-3">お問い合わせ</li>
-            </ul>
-            <div className="text-white">©Dot Log inc.</div>
+          <div className="bg-black flex flex-col items-center h-[486px]" >
+            <div className="mt-[78px]">
+              <Image
+                    src="/dotlogImage.png"
+                    alt="Sample Image"
+                    width={200}
+                    height={100}
+                    className="object-contain mt-[40px] mb-[30px]"
+              />
+            </div>
+            <div className="font-black mb-[100px]">
+              <Link href="" className="text-white inline-block text-xl px-3">トップ</Link>
+              <Link href="" className="text-white inline-block text-xl px-3">理念</Link>
+              <Link href="" className="text-white inline-block text-xl px-3">事業内容</Link>
+              <Link href="" className="text-white inline-block text-xl px-3">ニュース</Link>
+              <Link href="" className="text-white inline-block text-xl px-3">会社概要</Link>
+              <Link href="" className="text-white inline-block text-xl px-3">お問合せ</Link>
+            </div>
+            <div className="text-white font-black">©Dot Log inc.</div>
           </div>
-          </footer>
-    </>
+        </footer>
+    </Fragment>
   );
+
 }
