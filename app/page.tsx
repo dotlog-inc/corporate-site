@@ -1,38 +1,37 @@
 import Image from "next/image";
 import Link from "next/link" ;
+import { Fragment } from "react";
 
 export default function Home() {
   return (
-      <>
-        <header className="sticky top-0 flex">
-          <h1 className="text-blue-300 inline-block text-2xl mx-6 my-4">Dot Log inc.</h1>
-          <ul className="inline-block text-blue-300 ml-auto">
-            <li className="text-base inline-block px-3">TOP</li>
-            <li className="text-base inline-block px-3">PHILOSOPHY</li>
-            <li className="text-base inline-block px-3">SERVICE</li>
-            <li className="text-base inline-block px-3">NEWS</li>
-            <li className="text-base inline-block px-3">ABOUT</li>
-            <li className="text-base inline-block px-3">CONTACT</li>
-          </ul>
-        </header>
-        <main>
-          <div>
-            <div
-              className="bg-cover bg-center h-[500px] flex flex-col items-center  mx-8 my-8 rounded-3xl"
-              style={{backgroundImage: 'url(/waterImage.jpg)', }}
-            >
-                <Image
-                    src="/dotlogImage.png"
-                    alt="Sample Image"
-                    width={185}
-                    height={47}
-                />
-                <h1 className="text-white text-2xl.">株式会社ドットログ</h1>
-                <div className="text-white">OUR MISSION</div>
-                <div className="text-white">今日よりちょっとやさしい明日を。</div>
-            </div>
+    <Fragment>
+      <header>
+        <h1 className="text-blue-200 inline-block text-2xl">Dot Log inc.</h1>
+        <ul className="inline-block">
+          <li className="text-base inline-block px-12">TOP</li>
+          <li className="text-base inline-block px-12">PHILOSOPHY</li>
+          <li className="text-base inline-block px-12">SERVICE</li>
+          <li className="text-base inline-block px-12">NEWS</li>
+          <li className="text-base inline-block px-12">ABOUT</li>
+          <li className="text-base inline-block px-12">CONTACT</li>
+        </ul>
+        <div>
+          <div
+            className="bg-cover bg-center h-[500px] flex flex-col items-center "
+            style={{backgroundImage: 'url(/waterImage.jpg)', }}
+          >
+            <Image
+                src="/dotlogImage.png"
+                alt="Sample Image"
+                width={185}
+                height={47}
+            />
+            <h1 className="text-white text-2xl">株式会社ドットログ</h1>
           </div>
-          <section id="philo" className="container">
+        </div>
+      </header>
+      <main>
+        <section id="philo" className="container">
           <h1>PHILOSOPHY</h1>
           <div className="box">
           <h2>Dot Log</h2>
@@ -40,11 +39,10 @@ export default function Home() {
               私たちは、わくわくする世界を創るためのアイデアを思いつく限り（　）の中に入れ、世界にどんどん出力していくというミッションを掲げ、日々取り組んでおります。</p>
           </div>
           <div className="philos">
-          <div className="philo-1 title"> 
-              <h3>VISION</h3>
-              <p>迷ったら、わくわくするほうへ。</p>
-          </div>
-
+            <div className="philo-1 title"> 
+                <h3>VISION</h3>
+                <p>迷ったら、わくわくするほうへ。</p>
+            </div>
           <div className="philo-2 title"> 
             <h3>MISSION</h3>
              <p>今日よりちょっと優しい明日を</p>
@@ -88,27 +86,26 @@ export default function Home() {
               </p>
           </div>
        </section>
-          
-        </main>
-        <footer >
-          <div className="bg-black flex flex-col items-center" >
-            <Image
-                src="/dotlogImage.png"
-                alt="Sample Image"
-                width={200}
-                height={100}
-                
-            />
-            <ul>
-              <li className="text-white inline-block text-xl px-3">トップ</li>
-              <li className="text-white inline-block text-xl px-3">理念</li>
-              <li className="text-white inline-block text-xl px-3">事業内容</li>
-              <li className="text-white inline-block text-xl px-3">ニュース</li>
-              <li className="text-white inline-block text-xl px-3">会社概要</li>
-              <li className="text-white inline-block text-xl px-3">お問い合わせ</li>
-            </ul>
-            <div className="text-white">©Dot Log inc.</div>
-          </div>
-    </>
-      
+      </main>
+      <footer>
+        <div className="bg-black" >
+          <Image
+              src="/dotlogImage.png"
+              alt="Sample Image"
+              width={200}
+              height={100}
+              
+          />
+          <ul>
+            <li className="text-white inline-block">トップ</li>
+            <li className="text-white inline-block">理念</li>
+            <li className="text-white inline-block">事業内容</li>
+            <li className="text-white inline-block">ニュース</li>
+            <li className="text-white inline-block">会社概要</li>
+            <li className="text-white inline-block">お問い合わせ</li>
+          </ul>
+        </div>
+      </footer>
+    </Fragment>
+  );
 }
