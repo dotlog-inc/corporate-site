@@ -123,7 +123,8 @@ export default function Home() {
             </div>
             <div className="text-white font-black">©Dot Log inc.</div>
           </div>
-    </footer>
-  </Fragment>
-  )    
+        </footer>
+    </Fragment>
+  );
+
 }
