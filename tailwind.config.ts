@@ -12,6 +12,10 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      fontFamily: {
+        "a1-gothic-b": ['A1ゴシック B JIS2004', 'sans-serif'],
+        "a1-gothic-m": ['A1ゴシック M JIS2004', 'sans-serif'],  
+      },
     },
   },
   plugins: [],
