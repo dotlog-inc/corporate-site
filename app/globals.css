@@ -21,19 +21,19 @@
   text-align: center;
  }
  .box{
-  width: 850px;
-  height: 420px;
+  width: 90%;
+  height: 20%;
   border: solid 3px #000000;
   border-radius: 50px;
   margin:0 auto;
  }
  .box h2{
-  font-size: 40px;
+  font-size: 6vw;
   padding-left: 20px;
   padding-top: 10px;
  }
  .box p {
-  font-size: 20px;
+  font-size: 3vw;
   padding:10px 25px;
   line-height: 40px;
  }
