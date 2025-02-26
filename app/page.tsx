@@ -53,6 +53,15 @@ export default function Home() {
           <div className="philo-3 title">
             <h3>VALUE</h3>
               {/* 四つの図入れる */}
+              <div className="">
+                <ul className="flex">
+                  <li>縁<p>relationship すべての「人、モノ、コト」とのご縁を大切にし、常に助け合いの精神で取り組む。</p></li>
+                  <li>冒険<p>adventure 我々は常にわくわくする方を選び、挑戦を忘れない”アド”ベンチャー企業です。</p></li>
+                  <li>自然<p>nature 自然を大切にし、自然を楽しみ、自然と遊ぶ。
+                  自分らしく、自然体でいきていく。</p></li>
+                  <li>貢献<p>contribution 常に誰かのために行動し、社会に貢献し続けます。</p></li>
+                </ul>
+              </div>
           </div>
           </div>
       </section>
