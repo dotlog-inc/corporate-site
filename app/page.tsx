@@ -40,7 +40,7 @@ export default function Home() {
           </div>
           <div className="philos">
           <div className="philo-1 title"> 
-            <h3>VISION</h3>
+              <h3>VISION</h3>
               <p>迷ったら、わくわくするほうへ。</p>
           </div>
 
