@@ -37,7 +37,7 @@ export default function Home() {
             </div>
           </div>
           <section id="philo" className="flex flex-col items-center">
-          <h1>PHILOSOPHY</h1>
+          <p className="title1">PHILOSOPHY</p>
           <div className="box">
            <h2>Dot Log</h2>
             <p>企業名の『Dot Log』とは、あるプログラミング言語においてメッセージを出力するために使用される"console.log()"から由来しており、（）の中に入力されたものがスマートフォンやパソコンに出力（表示）されます。<br></br>
@@ -70,34 +70,49 @@ export default function Home() {
       </section>
 
 
-        <section id="service" className="container">
-        <h1>SERVICE</h1>
-          <div>
-            <h2>Alzuchi</h2>
-              <p>
-                心理カウンセラー監修のAIを活用したメンタルヘル<br>
-                </br>スケアアプリ「AIzuchi」AIとの会話を通じて自分を<br>
-                </br>もっと知る事ができ、頭の中を整理することができる<br>
-                </br>全く新しいジャーナリングアプリ             
+      <section id="service" className="flex flex-col items-center">
+        <p className="title2">SERVICE</p>
+          <div className="service1 flex">
+            <div className="Alzuchi1">
+              <Image src="/Alzuchi.png" alt="Alzuchi Image" 
+                     width={320} height={100} className="Alzuchi-img"/>
+            </div>
+            <div className="Alzuchi2">
+              <h3 className="service1-title">Alzuchi</h3>
+              <p className="service1-contents">心理カウンセラー監修のAIを活用したメンタルヘルスケアアプリ「AIzuchi」AIとの会話を通じて自分をもっと知る事ができ、頭の中を整理することができる全く新しいジャーナリングアプリ</p>
+              <p className="service1-botton2 btn-press">
+              <a href="https://aizuchi-lp.studio.site/" rel="noopener" target="_blank" className="service1-botton1">
+                サービスサイトへ ＞
+              </a>
               </p>
+            </div>
           </div>
-          <div>
-            <h2>企業ブランディング</h2>
-              <p>
-                Z世代ならでは視点から企業の「ブランディング」の<br>
-                </br>側面を整理し、提供するサービスや会社自体に、より<br>
-                </br>誇りを持っていただけるようサポートいたします。<br>
-                </br>サブスク型ホームページ制作サービス<br>
-                </br>「Grab」
+          <div className="service2 flex">
+            <div className="Grab1">
+              <Image src="/Grab.png" alt="Grab Image" 
+                     width={320} height={100} className="Grab-img"/>
+            </div>
+            <div className="Grab2">
+              <h3 className="service2-title">企業ブランディング</h3>
+              <p className="service2-contents1">Z世代ならでは視点から企業の「ブランディング」の側面を整理し、提供するサービスや会社自体に、より誇りを持っていただけるようサポートいたします。</p>
+              <p className="service2-contents2">サブスク型ホームページ製作サービス</p>
+              <p className="service2-contents3">「Grab」</p>
+              <p className="service2-botton2 btn-press">
+              <a href="" rel="noopener" target="_blank" className="service2-botton1">
+                サービスサイトへ ＞
+              </a>
               </p>
+            </div>
           </div>
-          <div>
-            <h2>SNSメディア</h2>
-              <p>
-                Instagram・TikTokにて、お悩み解消する情報やお出<br>
-                </br>かけ情報など、人生をより豊かにするための情報を発<br>
-                </br>信しております。
-              </p>
+          <div className="service1 flex">
+            <div className="media1">
+            <Image src="/media.jpg" alt="media Image" 
+                     width={320} height={100}  className="media-img"/>
+            </div>
+            <div className="Alzuchi2">
+              <h3 className="service1-title">SNSメディア</h3>
+              <p className="service1-contents">Instagram・TikTokにて、お悩み解消する情報やお出かけ情報など、人生をより豊かにするための情報を発信しております。</p>
+            </div>
           </div>
        </section>
           
