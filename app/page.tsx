@@ -5,34 +5,36 @@ import { Fragment } from "react";
 export default function Home() {
   return (
     <Fragment>
-        <header className="sticky top-0 flex mx-6">
-          <h1 className="text-sky-500 font-[1000] inline-block text-2xl my-4">Dot Log inc.</h1>
-          <div className="inline-block font-black text-sky-500 ml-auto">
-            <Link href="" className="text-base inline-block px-3 py-4">TOP</Link>
-            <Link href="" className="text-base inline-block px-3 py-4">PHILOSOPHY</Link>
-            <Link href="" className="text-base inline-block px-3 py-4">SERVICE</Link>
-            <Link href="" className="text-base inline-block px-3 py-4">NEWS</Link>
-            <Link href="" className="text-base inline-block px-3 py-4">ABOUT</Link>
-            <Link href="" className="text-base inline-block px-3 py-4">CONTACT</Link>
+        <header className="sticky top-0 flex mx-6 h-[88px]">
+          <h1 className="text-sky-500 font-[1000] inline-block text-2xl my-4 flex items-center justify-center">Dot Log inc.</h1>
+          <div className="inline-block font-black text-sky-500 ml-auto flex items-center">
+            <Link href="" className="text-base inline-block px-3 py-4 relative hover:scale-90 duration-200">TOP</Link>
+            <Link href="" className="text-base inline-block px-3 py-4 relative hover:scale-90 duration-200">PHILOSOPHY</Link>
+            <Link href="" className="text-base inline-block px-3 py-4 relative hover:scale-90 duration-200">SERVICE</Link>
+            <Link href="" className="text-base inline-block px-3 py-4 relative hover:scale-90 duration-200">NEWS</Link>
+            <Link href="" className="text-base inline-block px-3 py-4 relative hover:scale-90 duration-200">ABOUT</Link>
+            <Link href="" className="text-base inline-block px-3 py-4 relative hover:scale-90 duration-200">CONTACT</Link>
           </div>
         </header>
         <main>
-          <div>
+          <div className="pt-[8px] px-[48px] pb-[72px] mb-[109px]">
             <div
-              className="bg-cover bg-center h-[500px] flex flex-col items-center  mx-8 my-8 rounded-3xl pt-[96px] px-[48px] pb-[72px]"
+              className="bg-cover bg-center h-[500px] flex flex-col items-center rounded-[50px]"
               style={{backgroundImage: 'url(/waterImage.jpg)', }}
             >
-                <Image
-                    src="/dotlogImage.png"
-                    alt="Sample Image"
-                    width={185}
-                    height={47}
-                    className=""
-                />
-                <h1 className="text-white text-xl">株式会社ドットログ</h1>
-                <div className="font-black">
-                  <div className="text-white text-2xl">OUR MISSION</div>
-                  <div className="text-white text-5xl">今日よりちょっと<br></br>やさしい明日を。</div>
+                <div className="pt-[95px] px-[24] h-auto">
+                  <Image
+                      src="/dotlogImage.png"
+                      alt="Sample Image"
+                      width={185}
+                      height={47}
+                      className=""
+                  />
+                  <div className="text-white text-xl font-black mt-[15px] mb-[50px] tracking-[0.2rem] text-center">株式会社ドットログ</div>
+                </div> 
+                <div className="font-black tracking-[0.2rem] ">
+                  <div className="text-white text-2xl text-center">OUR MISSION</div>
+                  <div className="text-white text-5xl mt-[10px] leading-[1.2] ">今日よりちょっと<br></br>やさしい明日を。</div>
                 </div>
             </div>
           </div>
@@ -100,11 +102,11 @@ export default function Home() {
               </p>
           </div>
        </section>
-          
+      
         </main>
         <footer >
           <div className="bg-black flex flex-col items-center h-[486px]" >
-            <div className="mt-[78px]">
+            <div className="mt-[78px] ">
               <Image
                     src="/dotlogImage.png"
                     alt="Sample Image"
@@ -113,13 +115,13 @@ export default function Home() {
                     className="object-contain mt-[40px] mb-[30px]"
               />
             </div>
-            <div className="font-black mb-[100px]">
-              <Link href="" className="text-white inline-block text-xl px-3">トップ</Link>
-              <Link href="" className="text-white inline-block text-xl px-3">理念</Link>
-              <Link href="" className="text-white inline-block text-xl px-3">事業内容</Link>
-              <Link href="" className="text-white inline-block text-xl px-3">ニュース</Link>
-              <Link href="" className="text-white inline-block text-xl px-3">会社概要</Link>
-              <Link href="" className="text-white inline-block text-xl px-3">お問合せ</Link>
+            <div className="font-black mb-[100px] block">
+              <Link href="" className="text-white inline-block text-xl px-3 hover:scale-90 hover:text-gray-200 duration-200">トップ</Link>
+              <Link href="" className="text-white inline-block text-xl px-3 hover:scale-90 hover:text-gray-200 duration-200">理念</Link>
+              <Link href="" className="text-white inline-block text-xl px-3 hover:scale-90 hover:text-gray-200 duration-200">事業内容</Link>
+              <Link href="" className="text-white inline-block text-xl px-3 hover:scale-90 hover:text-gray-200 duration-200">ニュース</Link>
+              <Link href="" className="text-white inline-block text-xl px-3 hover:scale-90 hover:text-gray-200 duration-200">会社概要</Link>
+              <Link href="" className="text-white inline-block text-xl px-3 hover:scale-90 hover:text-gray-200 duration-200">お問合せ</Link>
             </div>
             <div className="text-white font-black">©Dot Log inc.</div>
           </div>
