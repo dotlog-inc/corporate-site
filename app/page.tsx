@@ -39,31 +39,51 @@ export default function Home() {
           <section id="philo" className="flex flex-col items-center">
           <p className="title1">PHILOSOPHY</p>
           <div className="box">
-           <h2>Dot Log</h2>
-            <p>企業名の『Dot Log』とは、あるプログラミング言語においてメッセージを出力するために使用される"console.log()"から由来しており、（）の中に入力されたものがスマートフォンやパソコンに出力（表示）されます。<br></br>
+            <p className="box-p1 text">Dot Log</p>
+            <p className="box-p2 text">
+              企業名の『Dot Log』とは、あるプログラミング言語においてメッセージを出力するために使用される"console.log()"から由来しており、（）の中に入力されたものがスマートフォンやパソコンに出力（表示）されます。
               私たちは、わくわくする世界を創るためのアイデアを思いつく限り（　）の中に入れ、世界にどんどん出力していくというミッションを掲げ、日々取り組んでおります。</p>
           </div>
         <div className="philos">
-          <div className="philo-1 title"> 
-              <h3>VISION</h3>
-              <p>迷ったら、わくわくするほうへ。</p>
+          <div className="philo-ap flex">
+           <div className="philo-1"> 
+              <p className="philo-1-p">VISION</p>
+              <h2 className="philo-1-h2">迷ったら、わくわくするほうへ。</h2>
+            </div>
           </div>
-          <div className="philo-2 title"> 
-            <h3>MISSION</h3>
-            <p>今日よりちょっと優しい明日を</p>
+          <div className="philo-ap flex">
+          <div className="philo-1"> 
+            <p className="philo-1-p">MISSION</p>
+            <h2 className="philo-1-h2">今日よりちょっと優しい明日を</h2>
           </div> 
+          </div>
 
-          <div className="philo-3 title">
-            <h3>VALUE</h3>
-              {/* 四つの図入れる */}
-              <div className="flex">
-                <ul>
-                  <li className="four-chart box2"><p className="text">縁</p><p className="text-base">relationship</p><p className="text-sm"> すべての「人、モノ、コト」とのご縁を大切にし、常に助け合いの精神で取り組む。</p></li>
-                  <li className="four-chart box2"><p className="text">冒険</p><p className="text-base">adventure</p><p className="text-sm"> 我々は常にわくわくする方を選び、挑戦を忘れない”アド”ベンチャー企業です。</p></li>
-                  <li className="four-chart box2"><p className="text">自然</p><p className="text-base">nature</p><p className="text-sm"> 自然を大切にし、自然を楽しみ、自然と遊ぶ。
-                  自分らしく、自然体でいきていく。</p></li>
-                  <li className="four-chart box2"><p className="text">貢献</p><p className="text-base">contribution</p><p className="text-sm"> 常に誰かのために行動し、社会に貢献し続けます。</p></li>
-                </ul>
+          <div className="philo-2">
+          <div className="philo-3">
+            <p className="philo-3-p">VALUE</p>
+            <div className="value flex">
+                <div className="relationship">
+                  <p className="relation-p1">縁</p>
+                  <p className="relation-p2">relationship</p>
+                  <p className="relation-p3">すべての「人、モノ、コト」とのご縁を大切にし、常に助け合いの精神で取り組む。</p>
+                </div>
+                <div className="relationship">
+                  <p className="relation-p1">冒険</p>
+                  <p className="relation-p2">adventure</p>
+                  <p className="relation-p3">我々は常にわくわくする方を選び、挑戦を忘れない”アド”ベンチャー企業です。</p>
+                </div>
+                <div className="relationship">
+                  <p className="relation-p1">自然</p>
+                  <p className="relation-p2">nature</p>
+                  <p className="relation-p3">自然を大切にし、自然を楽しみ、自然と遊ぶ。
+                  自分らしく、自然体でいきていく。</p>
+                </div>
+                <div className="relationship">
+                  <p className="relation-p1">貢献</p>
+                  <p className="relation-p2">contribution</p>
+                  <p className="relation-p3">常に誰かのために行動し、社会に貢献し続けます。</p>
+                </div>
+              </div>
               </div>
           </div>
         </div>
