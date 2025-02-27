@@ -3,17 +3,28 @@
 @tailwind components;
 @tailwind utilities;
 
-
- html,body{
-  width: 100%;
-  height: 80%;
-  margin: 0 auto;
-  justify-content: center; /* 水平方向に中央揃え */
-  align-items: center; /* 垂直方向に中央揃え */
-  background-color: #ffffff; /* 背景色の設定 (オプション) */
- }
+body {
+  background: #fff;
+  transition: background 0.5scubic-bezier(0.4, 0.4, 0, 1);
+}
+.flex {
+  display: flex;
+}
  /* フィロソフィー */
  #philo{
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 0px;
+  height: 3021px;
+  justify-content: flex-start;
+  margin: 0px 0px 0px 0px;
+  padding: 0px 0px 132px 0px;
+  width: 100%;
+  --gap-h-07c2f170-bcfc-497d-84ea-c286fe561719: 0px;
+  --gap-v-07c2f170-bcfc-497d-84ea-c286fe561719: 0px;
+  --gap-uuid: 07c2f170 -bcfc-497d-84ea-c286fe561719;
+  max-width: 100%;
   background: linear-gradient(var(--g-angle), var(--g-color-0) var(--g-position-0), var(--g-color-1) var(--g-position-1));
   --g-color-0: #d7f0ff;
   --g-position-0: 0%;
@@ -40,6 +51,7 @@
   --g-color-11: #ffdcdc;
   --g-position-11: 100%;
   --g-angle: 135deg;
+
  }
  h1 {
   color: #444444;
@@ -54,67 +66,236 @@
  }
  
  .box{
-  width: 85%;
-  height: 50%;
-  border: solid 3px #b0a7a7;
-  border-radius: 30px;
-  margin:0 auto;
-  background-color: #ffffff;
+    align-items: flex-start;
+    background: rgba(255, 255, 255, 0.74);
+    border-radius: 48px;
+    flex: none;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    height: 510px;
+    justify-content: center;
+    margin: 0px 42px 109px 42px;
+    padding: 46px;
+    width: 1074px;
+    max-width: calc(100% - 84px);
  }
- .box h2{
-  font-size: 5vw;
-  padding-left: 20px;
-  padding-top: 10px;
-  font-weight: bold;
+ .text {
+  background: rgba(0, 0, 0, 0.0);
+  color: #444444;
  }
- .box p {
-  font-size: 2vw;
-  padding:10px 25px;
-  line-height: 40px;
+ .box-p1 {
+  font-size: 48px;
+  font-style: normal;
+  margin: 0 0 25px;
+  font-weight: 700;
+  font-family: 'A1ゴシック L JIS2004';
+  letter-spacing: 0.12em;
+  line-height: 1.72;
+  text-align: left;
+  width: 600px;
+  max-width: 100%;
+  justify-content: flex-start;
+ }
+ .box-p2{
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    height: 262px;
+    letter-spacing: 0.05em;
+    line-height: 1.9;
+    margin: 0;
+    text-align: justify;
+    width: auto;
+    max-width: 100%;
+    justify-content: space-between;
+    font-family: var(--s-font-eea294a0);
+ }
+
+ .philo-ap {
+  align-items: center;
+  background: rgba(0, 0, 0, 0.0);
+  flex: none;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  height: 560px;
+  justify-content: center;
+  margin: 0px 0px 0px 0px;
+  overflow-x: visible;
+  overflow-y: visible;
+  padding: 0px 0px 0px 0px;
+  width: 100%;
+  max-width: 100%;
  }
  .philo-1 {
-  text-align: center;
-  margin: 0 auto;
-  padding-top: 200px;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.0);
+  flex: none;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  height: auto;
+  justify-content: center;
+  margin: 73px 0px 96px 0px;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  padding: 0px 24px 0px;
+  width: 1080px;
+  max-width: 100%;
  }
-.philo-1 h3 {
-  font-size: 15px;
-  margin-bottom: 0px;
+
+.philo-1-p {
+  flex: none;
+  font-family: var(--s-font-178fa961);
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  height: auto;
+  letter-spacing: 0.1em;
+  line-height: 1.6;
+  margin: 0px 0px 0px 0px;
+  text-align: center;
+  width: auto;
+  max-width: 100%;
+  justify-content: center;
 }
-.philo-1 p {
-  font-size: 40px;
-  margin: 13px 0 15px;
+.philo-1-h2 {
+  flex: none;
+  font-family: var(--s-font-eea294a0);
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  height: auto;
+  letter-spacing: 0.1em;
+  line-height: 1.6;
+  margin: 13px 0px 15px 0px;
+  text-align: center;
+  width: 935px;
+  max-width: 100%;
+  justify-content: center;
 }
+
 .philo-2 {
-  text-align: center;
-  margin: 0 auto;
-  padding-top: 200px;
- }
-.philo-2 h3 {
-  font-size: 15px;
-  margin-bottom: 0px;
-}
-.philo-2 p {
-  font-size: 40px;
-  margin: 13px 0 15px;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.0);
+  flex: none;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  height: 910px;
+  justify-content: center;
+  margin: 0px 0px 0px 0px;
+  overflow-x: visible;
+  overflow-y: visible;
+  padding: 0px 0px 0px 0px;
+  width: 100%;
+  max-width: 100%;
 }
 .philo-3 {
-  text-align: center;
-  margin: 0 auto;
-  padding-top: 200px;
-  padding-bottom: 30px;
+  align-items: center;
+    background: rgba(0, 0, 0, 0.0);
+    flex: none;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    height: 547px;
+    justify-content: flex-start;
+    margin: 0px 0px 0px 0px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    padding: 0px 24px 0px;
+    width: 1086px;
+    max-width: 100%;
 }
-.philo-3 h3 {
+.philo-3-p {
+  flex: none;
+  font-family: var(--s-font-178fa961);
   font-size: 20px;
-  margin: 0 0 40px;
+  font-style: normal;
+  font-weight: 600;
+  height: auto;
+  letter-spacing: 0.1em;
+  line-height: 1.6;
+  margin: 0px 0px 40px 0px;
+  text-align: center;
+  width: auto;
+  max-width: 100%;
+  justify-content: center;
 }
-ul {
-  display: flex;
+.value {
+  align-content: center;
+  align-items: center;
+  flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  list-style: none;
-  padding: 0 24px;
+  padding: 0px;
+  transition-delay: 300ms;
+  transition-duration: 1000ms;
 }
+.relationship {
+  align-items: flex-start;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 30px 40px 30px rgba(0, 0, 0, 0.1);
+    flex: none;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    height: 165px;
+    justify-content: center;
+    margin: 0px 24px 48px;
+    padding: 24px;
+    transition-duration: 800ms;
+    width: calc(50% - 48px);
+    max-width: calc(50% - 48px);
+}
+.relation-p1 {
+  font-family: var(--s-font-eea294a0);
+  font-size: 36px;
+  font-weight: 700;
+  height: auto;
+  letter-spacing: 0.05em;
+  line-height: 1;
+  margin: 0px 0px 0px 0px;
+  text-align: left;
+  transition-delay: 300ms;
+  transition-duration: 1000ms;
+  width: auto;
+  z-index: 1;
+  max-width: 100%;
+  justify-content: flex-start;
+}
+.relation-p2 {
+  flex: none;
+    font-family: var(--s-font-178fa961);
+    font-size: 16px;
+    font-weight: 700;
+    height: auto;
+    letter-spacing: 0.05em;
+    line-height: 1.4;
+    margin: 0px 0px 12px 0px;
+    text-align: left;
+    transition-delay: 300ms;
+    transition-duration: 1000ms;
+    width: 100%;
+    z-index: 1;
+    max-width: 100%;
+    justify-content: flex-start;
+}
+.relation-p3 {
+   flex: none;
+    font-family: var(--s-font-eea294a0);
+    font-size: 14px;
+    font-weight: 700;
+    height: auto;
+    letter-spacing: 0.05em;
+    line-height: 1.4;
+    margin: 0px 0px 0px 0px;
+    text-align: left;
+    transition-delay: 300ms;
+    transition-duration: 1000ms;
+    width: 100%;
+    z-index: 1;
+    max-width: 100%;
+    justify-content: flex-start;
+}
+
+
 .box2 {
   width: calc(50% - 48px);
   max-width: calc(50% - 48px);
@@ -131,9 +312,7 @@ ul {
   display: flex;
   justify-content: space-between;
 }
-.text {
-  font-size: 32px;
-}
+
 @media (max-width: 768px) {
   .box2 {
     width: 100%; /* 幅を100%にして縦並びに変更 */
@@ -149,10 +328,6 @@ ul {
   font-weight: normal;
   font-style: normal;
 }
-:root {
-  --s-font-178fa961: 'A1ゴシック L JIS2004', sans-serif;
-}
-
 
 
 @font-face {
@@ -163,7 +338,34 @@ ul {
 
 @font-face {
   font-family: 'A1ゴシック M JIS2004';
-  src:  url('/fonts/A1GothicM-JIS2004.woff2') format('woff2'),
-        url('/fonts/A1GothicM-JIS2004.woff') format('woff');
+  src:  url('/fonts/A1GothicM-JIS2004.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --s-font-9281289a: Lato;
+  --s-font-708c9e02: 'Noto Serif JP';
+  --s-font-faa93a07: 'Noto Sans JP';
+  --s-font-db8a55ff: Roboto;
+  --s-font-61ba42c7: 'Libre Baskerville';
+  --s-font-739796c4: 'M PLUS Rounded 1c';
+  --s-font-7bb0507f: 'Sawarabi Mincho';
+  --s-font-3097740f: 'ヒラギノ角ゴ W6 JIS2004';
+  --s-font-e985d48f: 'ヒラギノ角ゴ W3 JIS2004';
+  --s-font-b99460bf: 'リュウミン L-KL JIS2004';
+  --s-font-70b174d2: 'EB Garamond';
+  --s-font-53aeeba2: 'A1ゴシック L JIS2004';
+  --s-font-c095623b: Raleway;
+  --s-font-c4a6111f: 'PT Serif';
+  --s-font-1b91e338: '秀英にじみ角ゴシック銀 B';
+  --s-font-558af653: 'M PLUS 1p';
+  --s-font-f891e843: '新ゴ B JIS2004';
+  --s-font-5b847a95: 'M PLUS Rounded 1c';
+  --s-font-c5b45fc5: 'Zen Maru Gothic';
+  --s-font-fe992041: 'Gothic A1';
+  --s-font-178fa961: 'A1ゴシック B JIS2004';
+  --s-font-eea294a0: 'A1ゴシック M JIS2004';
+  --s-font-c38e1167: Montserrat;
 }
 
