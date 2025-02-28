@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link" ;
 import { Fragment } from "react";
+import ContactCard from "./component/contactCard";
 
 export default function Home() {
   return (
@@ -136,6 +137,7 @@ export default function Home() {
           </div>
        </section>
           
+          <ContactCard/>
         </main>
         <footer >
           <div className="bg-black flex flex-col items-center h-[486px]" >
