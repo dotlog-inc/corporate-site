@@ -797,20 +797,6 @@ body {
   font-style: normal;
 }
 
-
-@font-face {
-  font-family: 'A1ゴシック B JIS2004';
-  src:  url('/fonts/A1GothicB-JIS2004.woff2') format('woff2'),
-        url('/fonts/A1GothicB-JIS2004.woff') format('woff');
-}
-
-@font-face {
-  font-family: 'A1ゴシック M JIS2004';
-  src:  url('/fonts/A1GothicM-JIS2004.woff2') format('woff2');
-  font-weight: normal;
-  font-style: normal;
-}
-
 :root {
   --s-font-9281289a: Lato;
   --s-font-708c9e02: 'Noto Serif JP';
