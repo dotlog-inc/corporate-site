@@ -54,15 +54,11 @@ body {
   --g-color-11: #ffdcdc;
   --g-position-11: 100%;
   --g-angle: 135deg;
-
  }
  .title1 {
   color: #444444;
   flex: none;
-  font-family: var(--s-font-178fa961);
   font-size: 64px;
-  font-style: normal;
-  font-weight: 600;
   height: auto;
   letter-spacing: 0.1em;
   line-height: 1.6;
@@ -73,6 +69,9 @@ body {
   justify-content: center;
  }
  
+ .A1B {
+  font-family: 'A1B',sans-serif;
+ }
  .box{
     align-items: flex-start;
     background: rgba(255, 255, 255, 0.74);
@@ -93,11 +92,9 @@ body {
  }
  .box-p1 {
   flex: none;
-  font-family: var(--s-font-178fa961);
+  font-family: 'A1B',sans-serif;
   font-feature-settings: 'palt' 1;
   font-size: 48px;
-  font-style: normal;
-  font-weight: 700;
   height: auto;
   letter-spacing: 0.12em;
   line-height: 1.72;
@@ -109,10 +106,8 @@ body {
  }
  .box-p2{
   flex: none;
-  font-family: var(--s-font-eea294a0);
+  font-family: 'A1M',sans-serif;
   font-size: 24px;
-  font-style: normal;
-  font-weight: 500;
   height: 262px;
   letter-spacing: 0.05em;
   line-height: 1.9;
@@ -139,6 +134,7 @@ body {
   max-width: 100%;
  }
  .philo-1 {
+  color: #444444;
   display: flex;
   align-items: center;
   background: rgba(0, 0, 0, 0.0);
@@ -157,10 +153,8 @@ body {
 
 .philo-1-p {
   flex: none;
-  font-family: var(--s-font-178fa961);
+  font-family: 'A1B',sans-serif;
   font-size: 20px;
-  font-style: normal;
-  font-weight: 600;
   height: auto;
   letter-spacing: 0.1em;
   line-height: 1.6;
@@ -172,10 +166,8 @@ body {
 }
 .philo-1-h2 {
   flex: none;
-  font-family: var(--s-font-eea294a0);
+  font-family: 'A1M',sans-serif;
   font-size: 48px;
-  font-style: normal;
-  font-weight: 700;
   height: auto;
   letter-spacing: 0.1em;
   line-height: 1.6;
@@ -202,6 +194,7 @@ body {
   max-width: 100%;
 }
 .philo-3 {
+  color: #444444;
   align-items: center;
     background: rgba(0, 0, 0, 0.0);
     flex: none;
@@ -218,10 +211,8 @@ body {
 }
 .philo-3-p {
   flex: none;
-  font-family: var(--s-font-178fa961);
+  font-family: 'A1B',sans-serif;
   font-size: 20px;
-  font-style: normal;
-  font-weight: 600;
   height: auto;
   letter-spacing: 0.1em;
   line-height: 1.6;
@@ -259,9 +250,8 @@ body {
     max-width: calc(50% - 48px);
 }
 .relation-p1 {
-  font-family: var(--s-font-eea294a0);
+  font-family: 'A1M',sans-serif;
   font-size: 36px;
-  font-weight: 700;
   height: auto;
   letter-spacing: 0.05em;
   line-height: 1;
@@ -276,9 +266,8 @@ body {
 }
 .relation-p2 {
   flex: none;
-    font-family: var(--s-font-178fa961);
+  font-family: 'A1B',sans-serif;
     font-size: 16px;
-    font-weight: 700;
     height: auto;
     letter-spacing: 0.05em;
     line-height: 1.4;
@@ -293,9 +282,8 @@ body {
 }
 .relation-p3 {
    flex: none;
-    font-family: var(--s-font-eea294a0);
+   font-family: 'A1M',sans-serif;
     font-size: 14px;
-    font-weight: 700;
     height: auto;
     letter-spacing: 0.05em;
     line-height: 1.4;
@@ -346,7 +334,7 @@ body {
 .title2 {
   color: #444444;
   flex: none;
-  font-family: var(--s-font-178fa961);
+/*   font-family: var(--s-font-178fa961); */
   font-size: 64px;
   font-style: normal;
   font-weight: 600;
@@ -416,9 +404,8 @@ body {
 }
 .service1-title {
   color: #444444;
-  font-family: var(--s-font-178fa961);
+  font-family: 'A1B',sans-serif;
   font-size: 32px;
-  font-weight: 600;
   height: auto;
   line-height: 1.4;
   margin: 0px 0px 24px 0px;
@@ -432,9 +419,8 @@ body {
 .service1-contents {
     color: #000000;
     flex: none;
-    font-family: var(--s-font-eea294a0);
+    font-family: 'A1M',sans-serif;
     font-size: 16px;
-    font-weight: 700;
     height: auto;
     letter-spacing: 0.05em;
     line-height: 1.6;
@@ -464,10 +450,10 @@ body {
   transition-duration: 600ms;
 }
 .service1-botton2 a{
-  color: #ffffff;
   font-family: var(--s-font-3097740f);
-  font-size: 14px;
   font-weight: 700;
+  color: #ffffff;
+  font-size: 14px;
   height: auto;
   letter-spacing: 0.05em;
   line-height: 1.9;
@@ -562,9 +548,8 @@ body {
 }
 .service2-title {
   color: #444444;
-  font-family: var(--s-font-178fa961);
+  font-family: 'A1B',sans-serif;
   font-size: 32px;
-  font-weight: 600;
   height: auto;
   line-height: 1.4;
   margin: 0px 0px 24px 0px;
@@ -578,9 +563,8 @@ body {
 .service2-contents1 {
   color: #444444;
     flex: none;
-    font-family: var(--s-font-eea294a0);
+    font-family: 'A1M',sans-serif;
     font-size: 16px;
-    font-weight: 700;
     height: auto;
     letter-spacing: 0.05em;
     line-height: 1.6;
@@ -596,9 +580,8 @@ body {
 .service2-contents2 {
    color: #444444;
     flex: none;
-    font-family: var(--s-font-eea294a0);
+    font-family: 'A1M',sans-serif;
     font-size: 20px;
-    font-weight: 700;
     height: auto;
     letter-spacing: 0.05em;
     line-height: 1.6;
@@ -614,9 +597,8 @@ body {
 .service2-contents3 {
   color: #444444;
   flex: none;
-  font-family: var(--s-font-178fa961);
+  font-family: 'A1B',sans-serif;
   font-size: 28px;
-  font-weight: 700;
   height: auto;
   letter-spacing: 0.05em;
   line-height: 1.6;
@@ -630,6 +612,7 @@ body {
   justify-content: center;
 }
 .service2-botton1 {
+
   align-items: center;
   background: #65a0d4;
   border-bottom: 0px solid #000;
@@ -647,7 +630,6 @@ body {
 }
 .service2-botton2 {
     color: #ffffff;
-    font-family: var(--s-font-3097740f);
     font-size: 14px;
     font-weight: 700;
     height: auto;
@@ -752,39 +734,6 @@ body {
     width: calc(50% - 36px);
     max-width: calc(50% - 36px);
 }
-.service3-title {
-  color: #444444;
-  font-family: var(--s-font-178fa961);
-  font-size: 32px;
-  font-weight: 600;
-  height: auto;
-  line-height: 1.4;
-  margin: 0px 0px 24px 0px;
-  text-align: left;
-  transition-delay: 300ms;
-  transition-duration: 1000ms;
-  width: auto;
-  max-width: 100%;
-  justify-content: flex-start;
-}
-.service3-contents {
-    color: #000000;
-    flex: none;
-    font-family: var(--s-font-eea294a0);
-    font-size: 16px;
-    font-weight: 700;
-    height: auto;
-    letter-spacing: 0.05em;
-    line-height: 1.6;
-    margin: 0px 0px 48px 0px;
-    text-align: left;
-    transition-delay: 400ms;
-    transition-duration: 1000ms;
-    width: 404px;
-    z-index: 1;
-    max-width: 100%;
-    justify-content: flex-start;
-}
 
 /* ニュース */
 #news {
@@ -832,7 +781,7 @@ body {
 .news1 {
     color: #444444;
     flex: none;
-    font-family: var(--s-font-178fa961);
+    font-family: 'A1B',sans-serif;
     font-size: 64px;
     font-style: normal;
     font-weight: 600;
@@ -914,9 +863,8 @@ body {
 }
 .news-view4-p {
   color: #444444;
-  font-family: var(--s-font-178fa961);
+  font-family: 'A1B',sans-serif;
   font-size: 14px;
-  font-weight: 600;
   height: auto;
   line-height: 1.4;
   margin: 0px 0px 0px 0px;
@@ -947,7 +895,7 @@ body {
 .about1 {
     color: #444444;
     flex: none;
-    font-family: var(--s-font-178fa961);
+    font-family: 'A1B',sans-serif;
     font-size: 64px;
     font-style: normal;
     font-weight: 600;
@@ -973,6 +921,7 @@ body {
     padding: 0px;
     width: 100%;
     max-width: 100%;
+    font-family: 'A1M',sans-serif;
 }
 .about3 {
    background: #FFFFFF;
@@ -1041,7 +990,6 @@ body {
 .about4-1-1 {
   color: #000000;
   flex: none;
-  font-family: var(--s-font-eea294a0);
   font-size: 18px;
   font-style: normal;
   font-weight: 500;
@@ -1056,8 +1004,7 @@ body {
 }
 .about4-1-2 {
   color: #444444;
-  flex: 1;
-  font-family: var(--s-font-eea294a0);
+  flex: none;
   font-size: 18px;
   font-style: normal;
   font-weight: 500;
@@ -1070,6 +1017,10 @@ body {
   width: auto;
   max-width: 100%;
   justify-content: flex-start;
+}
+.zigyou {
+  letter-spacing: 0.34em !important;
+  width: 141px !important;
 }
 .about-b {
   align-items: center;
@@ -1110,10 +1061,15 @@ body {
   }
 }
 @font-face {
-  font-family: 'A1ゴシック L JIS2004';
-  src: url('/path/to/your/font-file.woff2') format('woff2'),
-       url('/path/to/your/font-file.woff') format('woff'),
-       url('/path/to/your/font-file.ttf') format('truetype');
+  font-family: 'A1B';
+  src: url('/fonts/A1B.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'A1M';
+  src: url('/fonts/A1M.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
