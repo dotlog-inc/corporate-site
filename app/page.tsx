@@ -40,7 +40,7 @@ export default function Home() {
             </div>
           </div>
           <section id="philo" className="flex flex-col items-center">
-          <p className="title1">PHILOSOPHY</p>
+          <p className="title1 A1B">PHILOSOPHY</p>
           <div className="box">
             <p className="box-p1 text">Dot Log</p>
             <p className="box-p2 text">
@@ -93,7 +93,7 @@ export default function Home() {
 
 
       <section id="service" className="flex flex-col items-center">
-        <p className="title2">SERVICE</p>
+        <p className="title2 A1B">SERVICE</p>
           <div className="service1 flex">
             <div className="Alzuchi1">
               <Image src="/Alzuchi.png" alt="Alzuchi Image" 
@@ -129,7 +129,7 @@ export default function Home() {
           <div className="service1 flex">
             <div className="media1">
             <Image src="/media.jpg" alt="media Image" 
-                     width={320} height={100}  className="media-img"/>
+                     width={823} height={393}  className="media-img"/>
             </div>
             <div className="Alzuchi2">
               <h3 className="service1-title">SNSメディア</h3>
@@ -193,7 +193,7 @@ export default function Home() {
            </div>
            <div className="about-c"> 
             <div className="about4-1">
-              <p className="about4-1-1">事業内容</p>
+              <p className="about4-1-1 zigyou">事業内容</p>
               <p className="about4-1-2">
                 ・アプリ開発<br></br>
                 ・SNSメデイア運用・インフルエンサー事業<br></br>
