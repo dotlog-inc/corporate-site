@@ -1100,3 +1100,31 @@ body {
   --s-font-c38e1167: Montserrat;
 }
 
+.contact1 {
+  color: #444444;
+  flex: none;
+  font-family: 'A1B',sans-serif;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 600;
+  height: auto;
+  letter-spacing: 0.1em;
+  line-height: 1.6;
+  text-align: center;
+  width: auto;
+  max-width: 100%;
+  justify-content: center;
+}
+
+.color1 {
+  color: #444444;
+}
+
+.vertical {
+  writing-mode: vertical-rl;
+}
+
+.textbox {
+  position: absolute;
+  right: 0;
+}
