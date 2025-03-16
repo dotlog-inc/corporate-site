@@ -73,6 +73,7 @@ body {
   font-family: 'A1B',sans-serif;
  }
  .box{
+    display: flex;
     align-items: flex-start;
     background: rgba(255, 255, 255, 0.74);
     border-radius: 48px;
@@ -105,9 +106,11 @@ body {
   justify-content: flex-start;
  }
  .box-p2{
+  background: rgba(0, 0, 0, 0.0);
+  display: flex;
   flex: none;
   font-family: 'A1M',sans-serif;
-  font-size: 24px;
+  font-size: 23.5px;
   height: 262px;
   letter-spacing: 0.05em;
   line-height: 1.9;
@@ -179,6 +182,7 @@ body {
 }
 
 .philo-2 {
+  display: flex;
   align-items: center;
   background: rgba(0, 0, 0, 0.0);
   flex: none;

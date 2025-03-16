@@ -2,8 +2,25 @@ import Image from "next/image";
 import Link from "next/link" ;
 import { Fragment } from "react";
 import ContactCard from "./component/contactCard";
+import { motion } from 'framer-motion';
+import styles from "./FramerMotion.module.css";
+import axios from "axios";
 
-export default function Home() {
+
+/* export async function getStaticProps(){
+  const NewsData = await ( 
+    await axios.get("http:localhost:1337/api/news-creates")
+).data.data;
+return {
+  props: {
+    news: NewsData,
+  },
+};
+}  */
+
+export default async function Home() {
+  const res =await axios.get("http:localhost:1337/api/news-creates");
+  const newsData = res.data.data;
   return (
     <Fragment>
         <header className="sticky top-0 flex mx-6 h-[88px]">
@@ -143,7 +160,14 @@ export default function Home() {
         <p className="news1">NEWS</p>
         <div className="news-view1">
           <div className="news-view2">
-            <div className="news-view3"></div>
+            <div className="news-view3">
+{/*                 <h2>test</h2>
+                {newsData.map((item) => (
+                  <div>
+                  <p>{item.attributes.id}</p>
+                  </div>
+                ))} */}
+            </div>
             <div className="news-view4">
               <a href="" className="news-view4-a">
                 <p className="news-view4-p">VIEW MORE ＞</p>
@@ -235,4 +259,3 @@ export default function Home() {
   );
 
 }
-
