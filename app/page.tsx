@@ -2,41 +2,35 @@ import Image from "next/image";
 import Link from "next/link" ;
 import { Fragment } from "react";
 import ContactCard from "./component/contactCard";
+import HeaderCard from "./component/headerCard";
 
 export default function Home() {
   return (
     <Fragment>
-        <header className="sticky top-0 flex mx-6 h-[88px]">
-          <h1 className="text-sky-500 font-[1000] inline-block text-2xl my-4 flex items-center justify-center">Dot Log inc.</h1>
-          <div className="inline-block font-black text-sky-500 ml-auto flex items-center">
-            <Link href="" className="text-base inline-block px-3 py-4 relative hover:scale-90 duration-200">TOP</Link>
-            <Link href="" className="text-base inline-block px-3 py-4 relative hover:scale-90 duration-200">PHILOSOPHY</Link>
-            <Link href="" className="text-base inline-block px-3 py-4 relative hover:scale-90 duration-200">SERVICE</Link>
-            <Link href="" className="text-base inline-block px-3 py-4 relative hover:scale-90 duration-200">NEWS</Link>
-            <Link href="" className="text-base inline-block px-3 py-4 relative hover:scale-90 duration-200">ABOUT</Link>
-            <Link href="" className="text-base inline-block px-3 py-4 relative hover:scale-90 duration-200">CONTACT</Link>
-          </div>
-        </header>
+        <HeaderCard/>
         <main>
-          <div className="pt-[8px] px-[48px] pb-[72px] mb-[109px]">
+          <div className="pt-[8px] px-[48px] pb-[72px] mb-[109px] flex ">
             <div
-              className="bg-cover bg-center h-[500px] flex flex-col items-center rounded-[50px]"
+              className="bg-cover bg-center w-full h-[500px] lg:h-[700px] flex flex-col justify-center items-center rounded-[50px]"
               style={{backgroundImage: 'url(/waterImage.jpg)', }}
             >
-                <div className="pt-[95px] px-[24] h-auto">
+                <div className="pt-[95px] px-[24] h-auto lg:mb-[50px]">
                   <Image
                       src="/dotlogImage.png"
                       alt="Sample Image"
-                      width={185}
+                      width={187}
                       height={47}
                       className=""
                   />
-                  <div className="text-white text-xl font-black mt-[15px] mb-[50px] tracking-[0.2rem] text-center">株式会社ドットログ</div>
+                  <div className="text-white text-lg md:text-xl lg:text-xl font-black mt-[15px] mb-[50px] tracking-[0.2rem] text-center font-body">株式会社ドットログ</div>
                 </div> 
-                <div className="font-black tracking-[0.2rem] ">
-                  <div className="text-white text-2xl text-center">OUR MISSION</div>
-                  <div className="text-white text-5xl mt-[10px] leading-[1.2] ">今日よりちょっと<br></br>やさしい明日を。</div>
+                <div className="font-black">
+                  <div className="text-white text-xl md:text-2xl lg:text-4xl text-center tracking-[0.2rem] font-body">OUR MISSION</div>
+                  <div className="text-white text-4xl md:text-5xl lg:text-7xl mt-[10px] tracking-[1.0rem] font-face">今日よりちょっと<br></br>やさしい明日を。</div>
                 </div>
+            </div>
+            <div className="textbox">
+              <p className="vertical text-xl">SCROLL</p>
             </div>
           </div>
           <section id="philo" className="flex flex-col items-center">
@@ -221,12 +215,12 @@ export default function Home() {
               />
             </div>
             <div className="font-black mb-[100px] block">
-              <Link href="" className="text-white inline-block text-xl px-3 hover:scale-90 hover:text-gray-200 duration-200">トップ</Link>
-              <Link href="" className="text-white inline-block text-xl px-3 hover:scale-90 hover:text-gray-200 duration-200">理念</Link>
-              <Link href="" className="text-white inline-block text-xl px-3 hover:scale-90 hover:text-gray-200 duration-200">事業内容</Link>
-              <Link href="" className="text-white inline-block text-xl px-3 hover:scale-90 hover:text-gray-200 duration-200">ニュース</Link>
-              <Link href="" className="text-white inline-block text-xl px-3 hover:scale-90 hover:text-gray-200 duration-200">会社概要</Link>
-              <Link href="" className="text-white inline-block text-xl px-3 hover:scale-90 hover:text-gray-200 duration-200">お問合せ</Link>
+              <Link href="" className="text-white inline-block text-sm md:text-xl px-3 hover:scale-90 hover:text-gray-200 duration-200">トップ</Link>
+              <Link href="#philo" className="text-white inline-block text-sm md:text-xl px-3 hover:scale-90 hover:text-gray-200 duration-200">理念</Link>
+              <Link href="#service" className="text-white inline-block text-sm md:text-xl px-3 hover:scale-90 hover:text-gray-200 duration-200">事業内容</Link>
+              <Link href="#news" className="text-white inline-block text-sm md:text-xl px-3 hover:scale-90 hover:text-gray-200 duration-200">ニュース</Link>
+              <Link href="#about" className="text-white inline-block text-sm md:text-xl px-3 hover:scale-90 hover:text-gray-200 duration-200">会社概要</Link>
+              <Link href="#contact" className="text-white inline-block text-sm md:text-xl px-3 hover:scale-90 hover:text-gray-200 duration-200">お問合せ</Link>
             </div>
             <div className="text-white font-black">©Dot Log inc.</div>
           </div>
