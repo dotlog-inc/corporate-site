@@ -7,20 +7,21 @@ import styles from "./FramerMotion.module.css";
 import axios from "axios";
 
 
-/* export async function getStaticProps(){
-  const NewsData = await ( 
-    await axios.get("http:localhost:1337/api/news-creates")
-).data.data;
-return {
-  props: {
-    news: NewsData,
-  },
-};
-}  */
 
 export default async function Home() {
-  const res =await axios.get("http:localhost:1337/api/news-creates");
-  const newsData = res.data.data;
+  const res =await fetch("http://localhost:3000/api/contact?populate=*");
+  const data = await res.json();
+    const formatDate = (dateString: string) => {
+    const date = new Date(dateString);
+    const year = date.getFullYear();
+    const month = String(date.getMonth() + 1).padStart(2, '0'); // 月は 0 ベースなので 1 を足す
+    const day = String(date.getDate()).padStart(2, '0');
+    const hours = String(date.getHours()).padStart(2, '0');
+    const minutes = String(date.getMinutes()).padStart(2, '0');
+    return `${year}/${month}/${day} ${hours}:${minutes}`;
+  };
+
+
   return (
     <Fragment>
         <header className="sticky top-0 flex mx-6 h-[88px]">
@@ -161,15 +162,30 @@ export default async function Home() {
         <div className="news-view1">
           <div className="news-view2">
             <div className="news-view3">
-{/*                 <h2>test</h2>
-                {newsData.map((item) => (
-                  <div>
-                  <p>{item.attributes.id}</p>
+              {data.data?.map((item:any) =>{
+                //pictureが存在すれば、画像を取得
+                const fullImageUrl = "http://localhost:1337" + item.picture[0].url;
+                return (
+                  <div key={item.id} className="news-box">
+                    <div className="news-pic">
+                    {fullImageUrl &&(
+                      <Image
+                        src={fullImageUrl}
+                        alt={item.title}
+                        width={200}
+                        height={150}
+                        className="news-img"
+                      />
+                    )}
+                    </div>
+                    <h3 className="item-title">{item.title}</h3>
+                   <p className="item-publishedAt">{formatDate(item.publishedAt)}</p>
                   </div>
-                ))} */}
+                );
+              })}
             </div>
             <div className="news-view4">
-              <a href="" className="news-view4-a">
+              <a href="/" className="news-view4-a">
                 <p className="news-view4-p">VIEW MORE ＞</p>
               </a>
             </div>
