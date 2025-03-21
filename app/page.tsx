@@ -9,7 +9,7 @@ import axios from "axios";
 
 
 export default async function Home() {
-  const res =await fetch("http://localhost:3000/api/contact?populate=*");
+  const res =await fetch(process.env.NEXT_PUBLIC_API_URL2 as string);
   const data = await res.json();
     const formatDate = (dateString: string) => {
     const date = new Date(dateString);
@@ -164,7 +164,7 @@ export default async function Home() {
             <div className="news-view3">
               {data.data?.map((item:any) =>{
                 //pictureが存在すれば、画像を取得
-                const fullImageUrl = "http://localhost:1337" + item.picture[0].url;
+                const fullImageUrl = process.env.NEXT_PUBLIC_API_URL1 + item.picture[0].url;
                 return (
                   <div key={item.id} className="news-box">
                     <div className="news-pic">
