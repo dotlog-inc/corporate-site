@@ -22,15 +22,16 @@ export default function Home() {
                       height={47}
                       className=""
                   />
-                  <div className="text-white text-lg md:text-xl lg:text-xl font-black mt-[15px] mb-[50px] tracking-[0.2rem] text-center font-body">株式会社ドットログ</div>
+                  <div className="text-white text-base sm:text-lg md:text-xl lg:text-xl font-black mt-[15px] mb-[50px] tracking-[0.2rem] text-center font-body">株式会社ドットログ</div>
                 </div> 
                 <div className="font-black">
-                  <div className="text-white text-xl md:text-2xl lg:text-4xl text-center tracking-[0.2rem] font-body">OUR MISSION</div>
-                  <div className="text-white text-4xl md:text-5xl lg:text-7xl mt-[10px] tracking-[1.0rem] font-face">今日よりちょっと<br></br>やさしい明日を。</div>
+                  <div className="text-white text-xs sm:text-xl md:text-2xl lg:text-4xl text-center tracking-[0.2rem] font-body">OUR MISSION</div>
+                  <div className="text-white text-2xl sm:text-4xl md:text-5xl lg:text-7xl mt-[10px] tracking-[0.5rem] md:tracking-[1.0rem] font-face">今日よりちょっと<br></br>やさしい明日を。</div>
                 </div>
             </div>
             <div className="textbox">
-              <p className="vertical text-xl">SCROLL</p>
+              <p className="vertical text-base text-sky-500">SCROLL </p>
+              
             </div>
           </div>
           <section id="philo" className="flex flex-col items-center">
@@ -215,12 +216,12 @@ export default function Home() {
               />
             </div>
             <div className="font-black mb-[100px] block">
-              <Link href="" className="text-white inline-block text-sm md:text-xl px-3 hover:scale-90 hover:text-gray-200 duration-200">トップ</Link>
-              <Link href="#philo" className="text-white inline-block text-sm md:text-xl px-3 hover:scale-90 hover:text-gray-200 duration-200">理念</Link>
-              <Link href="#service" className="text-white inline-block text-sm md:text-xl px-3 hover:scale-90 hover:text-gray-200 duration-200">事業内容</Link>
-              <Link href="#news" className="text-white inline-block text-sm md:text-xl px-3 hover:scale-90 hover:text-gray-200 duration-200">ニュース</Link>
-              <Link href="#about" className="text-white inline-block text-sm md:text-xl px-3 hover:scale-90 hover:text-gray-200 duration-200">会社概要</Link>
-              <Link href="#contact" className="text-white inline-block text-sm md:text-xl px-3 hover:scale-90 hover:text-gray-200 duration-200">お問合せ</Link>
+              <Link href="" className="text-white inline-block text-xs md:text-xl px-3 hover:scale-90 hover:text-gray-200 duration-200">トップ</Link>
+              <Link href="#philo" className="text-white inline-block text-xs md:text-xl px-3 hover:scale-90 hover:text-gray-200 duration-200">理念</Link>
+              <Link href="#service" className="text-white inline-block text-xs md:text-xl px-3 hover:scale-90 hover:text-gray-200 duration-200">事業内容</Link>
+              <Link href="#news" className="text-white inline-block text-xs md:text-xl px-3 hover:scale-90 hover:text-gray-200 duration-200">ニュース</Link>
+              <Link href="#about" className="text-white inline-block text-xs md:text-xl px-3 hover:scale-90 hover:text-gray-200 duration-200">会社概要</Link>
+              <Link href="#contact" className="text-white inline-block text-xs md:text-xl px-3 hover:scale-90 hover:text-gray-200 duration-200">お問合せ</Link>
             </div>
             <div className="text-white font-black">©Dot Log inc.</div>
           </div>
