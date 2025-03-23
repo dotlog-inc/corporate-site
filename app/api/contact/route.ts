@@ -1,6 +1,12 @@
+import { NextResponse } from "next/server";
 import { NextApiRequest } from "next";
-import {  NextResponse } from "next/server";
 import nodemailer from "nodemailer"
+
+export async function GET() {
+    const res  = await fetch("process.env.NEXT_PUBLIC_API_URL2");
+    const data = await res.json();
+  return NextResponse.json(data);
+}
 
 export async function POST(request:NextApiRequest){
 
@@ -36,4 +42,4 @@ export async function POST(request:NextApiRequest){
 );
 
     return Response.json("成功しました")
-}
+};
