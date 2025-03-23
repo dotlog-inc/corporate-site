@@ -1,10 +1,20 @@
+'use client'
+
 import Image from "next/image";
 import Link from "next/link" ;
 import { Fragment } from "react";
 import ContactCard from "./component/contactCard";
 import HeaderCard from "./component/headerCard";
+import { motion } from 'framer-motion';
+import AnimatedDiv from "./component/AnimatedDiv";
+import { useEffect } from "react";
+
 
 export default function Home() {
+  useEffect(() => {
+    // ページが読み込まれた時にスクロール位置を最上部に設定
+    window.scrollTo(0, 0);
+  }, []); 
   return (
     <Fragment>
         <HeaderCard/>
@@ -36,28 +46,28 @@ export default function Home() {
           </div>
           <section id="philo" className="flex flex-col items-center">
           <p className="title1 A1B">PHILOSOPHY</p>
-          <div className="box">
+          <AnimatedDiv className="box" direction="bottom">
             <p className="box-p1 text">Dot Log</p>
             <p className="box-p2 text">
               企業名の『Dot Log』とは、あるプログラミング言語においてメッセージを出力するために使用される"console.log()"から由来しており、（）の中に入力されたものがスマートフォンやパソコンに出力（表示）されます。
               <br></br>私たちは、わくわくする世界を創るためのアイデアを思いつく限り（　）の中に入れ、世界にどんどん出力していくというミッションを掲げ、日々取り組んでおります。</p>
-          </div>
+          </AnimatedDiv>
         <div className="philos">
           <div className="philo-ap flex">
-           <div className="philo-1"> 
+           <AnimatedDiv className="philo-1" > 
               <p className="philo-1-p">VISION</p>
               <h2 className="philo-1-h2">迷ったら、わくわくするほうへ。</h2>
-            </div>
+            </AnimatedDiv>
           </div>
           <div className="philo-ap flex">
-          <div className="philo-1"> 
+          <AnimatedDiv className="philo-1"> 
             <p className="philo-1-p">MISSION</p>
             <h2 className="philo-1-h2">今日よりちょっと優しい明日を</h2>
-          </div> 
+          </AnimatedDiv> 
           </div>
 
-          <div className="philo-2">
-          <div className="philo-3">
+          <div className="philo-2 flex">
+          <AnimatedDiv className="philo-3">
             <p className="philo-3-p">VALUE</p>
             <div className="value flex">
                 <div className="relationship">
@@ -81,7 +91,7 @@ export default function Home() {
                   <p className="relation-p3">常に誰かのために行動し、社会に貢献し続けます。</p>
                 </div>
               </div>
-              </div>
+              </AnimatedDiv>
           </div>
         </div>
       </section>
@@ -89,13 +99,13 @@ export default function Home() {
 
       <section id="service" className="flex flex-col items-center">
         <p className="title2 A1B">SERVICE</p>
-          <div className="service1 flex">
-            <div className="Alzuchi1">
+          <AnimatedDiv className="service1 flex" direction="left">
+            <AnimatedDiv className="Alzuchi1" direction="size">
               <Image src="/Alzuchi.png" alt="Alzuchi Image" 
                      width={320} height={100} className="Alzuchi-img"/>
-            </div>
+            </AnimatedDiv>
             <div className="Alzuchi2">
-              <h3 className="service1-title">Alzuchi</h3>
+              <AnimatedDiv><h3 className="service1-title">Alzuchi</h3></AnimatedDiv>
               <p className="service1-contents">心理カウンセラー監修のAIを活用したメンタルヘルスケアアプリ「AIzuchi」AIとの会話を通じて自分をもっと知る事ができ、頭の中を整理することができる全く新しいジャーナリングアプリ</p>
               <p className="service1-botton2 btn-press">
               <a href="https://aizuchi-lp.studio.site/" rel="noopener" target="_blank" className="service1-botton1">
@@ -103,14 +113,14 @@ export default function Home() {
               </a>
               </p>
             </div>
-          </div>
-          <div className="service2 flex">
-            <div className="Grab1">
+          </AnimatedDiv>
+          <AnimatedDiv className="service2 flex" direction="right">
+            <AnimatedDiv className="Grab1" direction="size">
               <Image src="/Grab.png" alt="Grab Image" 
                      width={320} height={100} className="Grab-img"/>
-            </div>
+            </AnimatedDiv>
             <div className="Grab2">
-              <h3 className="service2-title">企業ブランディング</h3>
+              <AnimatedDiv><h3 className="service2-title">企業ブランディング</h3></AnimatedDiv>
               <p className="service2-contents1">Z世代ならでは視点から企業の「ブランディング」の側面を整理し、提供するサービスや会社自体に、より誇りを持っていただけるようサポートいたします。</p>
               <p className="service2-contents2">サブスク型ホームページ製作サービス</p>
               <p className="service2-contents3">「Grab」</p>
@@ -120,17 +130,45 @@ export default function Home() {
               </a>
               </p>
             </div>
-          </div>
-          <div className="service1 flex">
-            <div className="media1">
-            <Image src="/media.jpg" alt="media Image" 
-                     width={823} height={393}  className="media-img"/>
-            </div>
+          </AnimatedDiv>
+          <AnimatedDiv className="service1 flex" direction="left">
+          <motion.div
+      className="media1"
+      initial={{ opacity: 1 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 1, ease: "easeOut" }}
+      viewport={{ once: true }} 
+      style={{
+        width: "937.6px",  // 枠のサイズを固定
+        height: "393px", // 枠のサイズを固定
+        overflow: "hidden",  // 枠からはみ出さないようにする
+        borderRadius: "24px",  // 枠の角を丸くする
+        position: "relative",  // 子要素を位置決めするため
+      }}
+    >
+      <motion.img
+        src="/media.jpg"  // 画像のソース
+        alt="media-img"
+        initial={{ width: "150%", height: "150%" }}  // 初期状態で画像が枠いっぱいに収まる
+        whileInView={{
+          width: "100%",
+          height: "100%",  
+        }}
+        transition={{ duration: 1.0, ease: "easeOut" }}
+        viewport={{ once: true }} 
+        style={{
+          objectFit: "cover",  // 画像が枠内に収まるようにする
+          position: "absolute",  // 画像の位置を絶対に設定
+          top: "0",
+          left: "0",
+        }}
+      />
+    </motion.div>
             <div className="Alzuchi2">
-              <h3 className="service1-title">SNSメディア</h3>
+              <AnimatedDiv><h3 className="service1-title">SNSメディア</h3></AnimatedDiv>
               <p className="service1-contents">Instagram・TikTokにて、お悩み解消する情報やお出かけ情報など、人生をより豊かにするための情報を発信しております。</p>
             </div>
-          </div>
+          </AnimatedDiv>
        </section>
 
       
@@ -139,18 +177,18 @@ export default function Home() {
         <div className="news-view1">
           <div className="news-view2">
             <div className="news-view3"></div>
-            <div className="news-view4">
+            <AnimatedDiv className="news-view4">
               <a href="" className="news-view4-a">
                 <p className="news-view4-p">VIEW MORE ＞</p>
               </a>
-            </div>
+            </AnimatedDiv>
           </div>
         </div>
       </section>
 
       <section id="about" className="flex flex-col items-center">
         <p className="about1">ABOUT</p>
-        <div className="about2">
+        <AnimatedDiv className="about2">
           <div className="about3"></div>
           <div className="about4">
            <div className="about-a"> 
@@ -198,7 +236,7 @@ export default function Home() {
             </div>
            </div>
           </div>
-        </div>
+        </AnimatedDiv>
       </section>
           
         <ContactCard/>
