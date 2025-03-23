@@ -4,9 +4,6 @@ import Image from "next/image";
 import Link from "next/link" ;
 import { Fragment } from "react";
 import ContactCard from "./component/contactCard";
-import { motion } from 'framer-motion';
-import styles from "./FramerMotion.module.css";
-import axios from "axios";
 import HeaderCard from "./component/headerCard";
 import { motion } from 'framer-motion';
 import AnimatedDiv from "./component/AnimatedDiv";
@@ -28,9 +25,6 @@ export default async function Home() {
     return `${year}/${month}/${day} ${hours}:${minutes}`;
   };
 
-
-
-export default function Home() {
   useEffect(() => {
     // ページが読み込まれた時にスクロール位置を最上部に設定
     window.scrollTo(0, 0);
@@ -221,8 +215,6 @@ export default function Home() {
                 );
               })}
             </div>
-            <div className="news-view4">
-              <a href="/" className="news-view4-a">
 
             <div className="news-view3"></div>
             <AnimatedDiv className="news-view4">
@@ -315,5 +307,4 @@ export default function Home() {
       </footer>
     </Fragment>
   );
-
-}
+};
