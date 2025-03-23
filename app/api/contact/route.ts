@@ -1,3 +1,11 @@
+
+import { NextResponse } from "next/server";
+
+export async function GET() {
+    const res  = await fetch("http://localhost:1337/api/news-creates?populate=*");
+    const data = await res.json();
+  return NextResponse.json(data);
+
 import { NextApiRequest } from "next";
 import {  NextResponse } from "next/server";
 import nodemailer from "nodemailer"
@@ -36,4 +44,3 @@ export async function POST(request:NextApiRequest){
 );
 
     return Response.json("成功しました")
-}
