@@ -10,7 +10,7 @@ const ContactCard = () => {
 
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>)=>{
         e.preventDefault();
-        //console.log(nameRef.current?.value);
+        console.log(nameRef.current?.value);
 
         let data = {
             name: nameRef.current?.value,
@@ -37,8 +37,8 @@ const ContactCard = () => {
         </div>
         <div className="md:px-[48px] px-[0px] color1">
             <div className="font-face bg-white rounded-xl md:p-[96px] p-[48px] flex flex-col justify-center drop-shadow-2xl">
-                <h4 className="text-center mb-[24px] text-lg md:text-[28px] leading-[1.5] tracking-widest font-bold">弊社へのお問い合わせは<br></br>こちらのフォームより承っております。</h4>
-                <p className="text-center mb-[48px] text-sm md:text-base font-bold">ご返信に3営業日ほどお時間をいただいております。<br></br>3営業日を過ぎても返信がない場合は、お手数ですが再度お問い合わせをお願いいたします。</p>
+                <h4 className="text-center mb-[24px] text-base sm:text-lg md:text-[28px] leading-[1.5] tracking-widest font-bold">弊社へのお問い合わせは<br></br>こちらのフォームより承っております。</h4>
+                <p className="text-center mb-[48px] text-xs sm:text-sm md:text-base font-bold">ご返信に3営業日ほどお時間をいただいております。<br></br>3営業日を過ぎても返信がない場合は、お手数ですが再度お問い合わせをお願いいたします。</p>
                 <form action="" className="flex flex-col justify-center" onSubmit={(e: React.FormEvent<HTMLFormElement>) => handleSubmit(e)}>
                     <div className="mb-6">
                         <p className="font-black inline-block">お名前</p>
@@ -62,9 +62,11 @@ const ContactCard = () => {
                     </div>
                     <label  htmlFor="checkbox" className="flex justify-center">
                         <input id="checkbok" type="checkbox" required />
-                        <span>プライバシーポリシーに同意して送信する</span>
+                        <span className="text-xs sm:text-base">プライバシーポリシーに同意して送信する</span>
                     </label>
-                    <button type="submit" className="text-white bg-black rounded-lg font-black h-[50px] drop-shadow-2xl duration-200 hover:drop-shadow-none w-[180px] sm:w-[200px]">この内容で送信する</button>
+                    <div className="flex justify-center mt-[10px]">
+                        <button type="submit" className="text-white bg-black rounded-lg font-black h-[50px] drop-shadow-2xl duration-200 hover:drop-shadow-none hover:translate-x-1.5 hover:translate-y-1.5 w-[180px] sm:w-[200px]">この内容で送信する</button>
+                    </div>
                 </form>
             </div>
         </div>

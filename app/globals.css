@@ -705,11 +705,10 @@ body {
   flex: none;
   flex-direction: row-reverse;
   flex-wrap: nowrap;
+  width: 823px;
   height: 393px;
   justify-content: center;
   margin: 0px 0px 0px 0px;
-  overflow-x: hidden;
-  overflow-y: hidden;
   padding: 0px;
   width: 50%;
   max-width: 50%;
