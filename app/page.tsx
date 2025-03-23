@@ -1,4 +1,3 @@
-'use client'
 
 import Image from "next/image";
 import Link from "next/link" ;
@@ -25,10 +24,7 @@ export default async function Home() {
     return `${year}/${month}/${day} ${hours}:${minutes}`;
   };
 
-  useEffect(() => {
-    // ページが読み込まれた時にスクロール位置を最上部に設定
-    window.scrollTo(0, 0);
-  }, []); 
+
 
   return (
     <Fragment>
@@ -147,7 +143,7 @@ export default async function Home() {
             </div>
           </AnimatedDiv>
           <AnimatedDiv className="service1 flex" direction="left">
-          <motion.div
+{/*           <motion.div
       className="media1"
       initial={{ opacity: 1 }}
       whileInView={{ opacity: 1 }}
@@ -178,7 +174,7 @@ export default async function Home() {
           left: "0",
         }}
       />
-    </motion.div>
+    </motion.div> */}
             <div className="Alzuchi2">
               <AnimatedDiv><h3 className="service1-title">SNSメディア</h3></AnimatedDiv>
               <p className="service1-contents">Instagram・TikTokにて、お悩み解消する情報やお出かけ情報など、人生をより豊かにするための情報を発信しております。</p>
@@ -215,11 +211,8 @@ export default async function Home() {
                 );
               })}
             </div>
-
-            <div className="news-view3"></div>
             <AnimatedDiv className="news-view4">
-              <a href="" className="news-view4-a">
-
+              <a href="/" className="news-view4-a">
                 <p className="news-view4-p">VIEW MORE ＞</p>
               </a>
             </AnimatedDiv>
