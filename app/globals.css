@@ -808,7 +808,7 @@ body {
   justify-content: flex-start;
   padding: 65px 48px 68px;
   transition-delay: 400ms;
-  transition-duration: 1200ms;
+  transition-duration: 120ms;
   width: 1218px;
   max-width: 100%;
 }
@@ -836,7 +836,7 @@ body {
   flex-direction: row;
   flex-wrap: wrap;
   height: 368px;
-  justify-content: center;
+  justify-content: flex-start;
   margin: 0px 0px 0px;
   overflow-x: visible;
   overflow-y: visible;
@@ -1091,8 +1091,75 @@ body {
     max-width: 100%;
 }
 
+/* viewmore */
+#news11 {
+  align-items: center;
+  background: linear-gradient(var(--g-angle), var(--g-color-0) var(--g-position-0), var(--g-color-1) var(--g-position-1));
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 0px;
+  height: 100%;
+  justify-content: flex-start;
+  margin: 50px 0px 50px 0px;
+  padding: 0px 0px 1000px 0px;
+  width: 100%;
+  --gap-h-16606934-140b-4f36-8186-600897c37cce: 0px;
+  --gap-v-16606934-140b-4f36-8186-600897c37cce: 0px;
+  --gap-uuid: 16606934 -140b -4f36 -8186 -600897c37cce;
+  max-width: 100%;
+  --g-color-0: #d7f0ff;
+  --g-position-0: 0%;
+  --g-color-1: #ffdcdc;
+  --g-position-1: 100%;
+  --g-color-2: #ffdcdc;
+  --g-position-2: 100%;
+  --g-color-3: #ffdcdc;
+  --g-position-3: 100%;
+  --g-color-4: #ffdcdc;
+  --g-position-4: 100%;
+  --g-color-5: #ffdcdc;
+  --g-position-5: 100%;
+  --g-color-6: #ffdcdc;
+  --g-position-6: 100%;
+  --g-color-7: #ffdcdc;
+  --g-position-7: 100%;
+  --g-color-8: #ffdcdc;
+  --g-position-8: 100%;
+  --g-color-9: #ffdcdc;
+  --g-position-9: 100%;
+  --g-color-10: #ffdcdc;
+  --g-position-10: 100%;
+  --g-color-11: #ffdcdc;
+  --g-position-11: 100%;
+  --g-angle: 135deg;
+}
 
+.news11 {
+    color: #444444;
+    flex: none;
+    font-family: 'A1B',sans-serif;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 600;
+    height: auto;
+    letter-spacing: 0.1em;
+    line-height: 1.6;
+    margin: -56px 0px 164px 0px;
+    text-align: center;
+    width: auto;
+    max-width: 100%;
+    justify-content: center;
+}
 
+.news-view44 {
+  position: relative;
+  height: 100vh;
+}
+.element {
+  position: absolute;
+  bottom: -60%;
+  width: 100%;
+}
 
 
 

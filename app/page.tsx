@@ -4,9 +4,8 @@ import Link from "next/link" ;
 import { Fragment } from "react";
 import ContactCard from "./component/contactCard";
 import HeaderCard from "./component/headerCard";
-import { motion } from 'framer-motion';
-import AnimatedDiv from "./component/AnimatedDiv";
-import { useEffect } from "react";
+import { AnimatedDiv, AniMatediV, Animatediv} from "./component/AnimatedDiv";
+
 
 
 
@@ -143,38 +142,9 @@ export default async function Home() {
             </div>
           </AnimatedDiv>
           <AnimatedDiv className="service1 flex" direction="left">
-{/*           <motion.div
-      className="media1"
-      initial={{ opacity: 1 }}
-      whileInView={{ opacity: 1 }}
-      transition={{ duration: 1, ease: "easeOut" }}
-      viewport={{ once: true }} 
-      style={{
-        width: "937.6px",  // 枠のサイズを固定
-        height: "393px", // 枠のサイズを固定
-        overflow: "hidden",  // 枠からはみ出さないようにする
-        borderRadius: "24px",  // 枠の角を丸くする
-        position: "relative",  // 子要素を位置決めするため
-      }}
-    >
-      <motion.img
-        src="/media.jpg"  // 画像のソース
-        alt="media-img"
-        initial={{ width: "150%", height: "150%" }}  // 初期状態で画像が枠いっぱいに収まる
-        whileInView={{
-          width: "100%",
-          height: "100%",  
-        }}
-        transition={{ duration: 1.0, ease: "easeOut" }}
-        viewport={{ once: true }} 
-        style={{
-          objectFit: "cover",  // 画像が枠内に収まるようにする
-          position: "absolute",  // 画像の位置を絶対に設定
-          top: "0",
-          left: "0",
-        }}
-      />
-    </motion.div> */}
+         <AniMatediV>
+          <Animatediv/>
+         </AniMatediV>
             <div className="Alzuchi2">
               <AnimatedDiv><h3 className="service1-title">SNSメディア</h3></AnimatedDiv>
               <p className="service1-contents">Instagram・TikTokにて、お悩み解消する情報やお出かけ情報など、人生をより豊かにするための情報を発信しております。</p>
@@ -188,7 +158,7 @@ export default async function Home() {
         <div className="news-view1">
           <div className="news-view2">
 
-            <div className="news-view3">
+            <AnimatedDiv className="news-view3">
               {data.data?.map((item:any) =>{
                 //pictureが存在すれば、画像を取得
                 const fullImageUrl = process.env.NEXT_PUBLIC_API_URL1 + item.picture[0].url;
@@ -205,16 +175,18 @@ export default async function Home() {
                       />
                     )}
                     </div>
-                    <h3 className="item-title">{item.title}</h3>
+                    <h3 className="item-title">
+                     <a href="/news/[id].tsx">{item.title}</a> 
+                    </h3>
                    <p className="item-publishedAt">{formatDate(item.publishedAt)}</p>
                   </div>
                 );
               })}
-            </div>
+            </AnimatedDiv>
             <AnimatedDiv className="news-view4">
-              <a href="/" className="news-view4-a">
+              <Link href="/news" className="news-view4-a">
                 <p className="news-view4-p">VIEW MORE ＞</p>
-              </a>
+              </Link>
             </AnimatedDiv>
           </div>
         </div>
