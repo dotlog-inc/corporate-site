@@ -49,16 +49,18 @@ const HeaderCard = () => {
             
                 {/* メニュー表示 */}
                 {isOpen && (
-                    <nav className="absolute top-16 left-0 w-full bg-white shadow-lg p-4">
-                    <ul className="space-y-2">
-                        <li><a href="/" className="block">HOME</a></li>
-                        <li><a href="#philo" className="block">PHILOSOPHY</a></li>
-                        <li><a href="#service" className="block">SERVICE</a></li>
-                        <li><a href="#about" className="block">ABOUT</a></li>
-                        <li><a href="#news" className="block">NEWS</a></li>
-                        <li><a href="#contact" className="block">CONTACT</a></li>
+                    <div className="absolute top-16 left-0 w-full bg-white w-full">
+                    <ul className="space-y-2  text-stone-800 font-medium ">
+                        <li><Link href="/" className="block text-base px-[48px] py-[24px] hover:text-stone-500">HOME</Link></li>
+                        <li><Link href="#philo" className="block text-base px-[48px] py-[24px] hover:text-stone-500">PHILOSOPHY</Link></li>
+                        <li><Link href="#service" className="block text-base px-[48px] py-[24px] hover:text-stone-500">SERVICE</Link></li>
+                        <li><Link href="#about" className="block text-base px-[48px] py-[24px] hover:text-stone-500">ABOUT</Link></li>
+                        <li><Link href="#news" className="block text-base px-[48px] py-[24px] hover:text-stone-500">NEWS</Link></li>
+                        <li><Link href="#contact" className="block text-base px-[48px] py-[24px] hover:text-stone-500">CONTACT</Link></li>
                     </ul>
-                    </nav>)}
+                    </div>)}
+
+                    
             </div>
 
             }

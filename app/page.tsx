@@ -40,8 +40,8 @@ export default async function Home() {
                       src="/dotlogImage.png"
                       alt="Sample Image"
                       width={187}
-                      height={47}
-                      className=""
+                      height={48}
+                      className="md:w-[220px]"
                   />
                   <div className="text-white text-base sm:text-lg md:text-xl lg:text-xl font-black mt-[15px] mb-[50px] tracking-[0.2rem] text-center font-body">株式会社ドットログ</div>
                 </div> 
@@ -51,10 +51,10 @@ export default async function Home() {
                 </div>
             </div>
             <div className="textbox">
-              <p className="vertical text-base text-sky-500">SCROLL </p>
-              
+              <p className="vertical text-base text-sky-500">SCROLL  </p><div className="rotate-90 border-2 border-blue-500  "></div>
             </div>
           </div>
+          
           <section id="philo" className="flex flex-col items-center">
           <p className="title1 A1B">PHILOSOPHY</p>
           <AnimatedDiv className="box" direction="bottom">
@@ -143,7 +143,7 @@ export default async function Home() {
             </div>
           </AnimatedDiv>
           <AnimatedDiv className="service1 flex" direction="left">
-{/*           <motion.div
+    <motion.div
       className="media1"
       initial={{ opacity: 1 }}
       whileInView={{ opacity: 1 }}
@@ -174,7 +174,7 @@ export default async function Home() {
           left: "0",
         }}
       />
-    </motion.div> */}
+    </motion.div> 
             <div className="Alzuchi2">
               <AnimatedDiv><h3 className="service1-title">SNSメディア</h3></AnimatedDiv>
               <p className="service1-contents">Instagram・TikTokにて、お悩み解消する情報やお出かけ情報など、人生をより豊かにするための情報を発信しております。</p>
