@@ -1,14 +1,14 @@
-.box{
-    align-items: flex-start;
-    background: rgba(255, 255, 255, 0.74);
-    border-radius: 48px;
-    flex: none;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    height: 510px;
-    justify-content: center;
-    margin: 0px 42px 109px 42px;
-    padding: 46px;
-    width: 1074px;
-    max-width: calc(100% - 84px);
- }
+.box {
+  align-items: flex-start;
+  background: rgba(255, 255, 255, 0.74);
+  border-radius: 48px;
+  flex: none;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  height: 510px;
+  justify-content: center;
+  margin: 0px 42px 109px 42px;
+  padding: 46px;
+  width: 1074px;
+  max-width: calc(100% - 84px);
+}
