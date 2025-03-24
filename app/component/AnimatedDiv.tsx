@@ -3,9 +3,9 @@ import { motion } from "framer-motion";
 import { ReactNode, useEffect } from "react";
 
 type AnimatedDivProps = {
+  direction?: "left" | "right" | "top" | "bottom" | "size";
   children: ReactNode;
   className?: string;
-  direction?: "left" | "right" | "top" | "bottom" | "size";
 };
 
 const AnimatedDiv = ({
@@ -46,4 +46,57 @@ const AnimatedDiv = ({
   );
 };
 
-export default AnimatedDiv;
+type AniMatediVProps = {
+  children: ReactNode;
+  className?: string;
+};
+
+const AniMatediV = ({ children, className }: AniMatediVProps) => {
+  return (
+    <motion.div
+      className={className}
+      initial={{ opacity: 1 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 1, ease: "easeOut" }}
+      viewport={{ once: true }}
+      style={{
+        width: "937.6px", // 枠のサイズを固定
+        height: "393px", // 枠のサイズを固定
+        overflow: "hidden", // 枠からはみ出さないようにする
+        borderRadius: "24px", // 枠の角を丸くする
+        position: "relative", // 子要素を位置決めするため
+      }}
+    >
+      {children}
+    </motion.div>
+  );
+};
+
+type AnimatedivProps = {
+  className?: string;
+};
+
+const Animatediv = ({ className }: AnimatedivProps) => {
+  return (
+    <motion.img
+      className={className}
+      src="/media.jpg" // 画像のソース
+      alt="media-img"
+      initial={{ width: "150%", height: "150%" }} // 初期状態で画像が枠いっぱいに収まる
+      whileInView={{
+        width: "100%",
+        height: "100%",
+      }}
+      transition={{ duration: 1.0, ease: "easeOut" }}
+      viewport={{ once: true }}
+      style={{
+        objectFit: "cover", // 画像が枠内に収まるようにする
+        position: "absolute", // 画像の位置を絶対に設定
+        top: "0",
+        left: "0",
+      }}
+    />
+  );
+};
+
+export { AnimatedDiv, AniMatediV, Animatediv };

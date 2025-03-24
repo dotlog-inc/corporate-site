@@ -1,7 +1,6 @@
 "use client";
-
 import React, { useRef } from "react";
-import AnimatedDiv from "./AnimatedDiv";
+import { AnimatedDiv } from "./AnimatedDiv";
 const ContactCard = () => {
   const nameRef = useRef<HTMLInputElement>(null);
   const emailRef = useRef<HTMLInputElement>(null);

@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Fragment } from "react";
 import ContactCard from "./component/contactCard";
 import HeaderCard from "./component/headerCard";
-import AnimatedDiv from "./component/AnimatedDiv";
+import { AnimatedDiv } from "./component/AnimatedDiv";
 
 interface Picture {
   url: string;
