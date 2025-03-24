@@ -3,22 +3,11 @@ import Link from "next/link";
 import { Fragment } from "react";
 import ContactCard from "./component/contactCard";
 import HeaderCard from "./component/headerCard";
-import { AnimatedDiv } from "./component/AnimatedDiv";
-
-interface Picture {
-  url: string;
-}
-
-interface NewsItem {
-  id: number;
-  title: string;
-  publishedAt: string;
-  picture: Picture[];
-}
+import { AnimatedDiv, AniMatediV, Animatediv } from "./component/AnimatedDiv";
 
 export default async function Home() {
   const res = await fetch(process.env.NEXT_PUBLIC_API_URL2 as string);
-  const data: { data: NewsItem[] } = await res.json();
+  const data = await res.json();
   const formatDate = (dateString: string) => {
     const date = new Date(dateString);
     const year = date.getFullYear();
@@ -68,8 +57,9 @@ export default async function Home() {
           <AnimatedDiv className="box" direction="bottom">
             <p className="box-p1 text">Dot Log</p>
             <p className="box-p2 text">
-              企業名の『DotLog』とは、あるプログラミング言語においてメッセージを出力するために使用される&quot;console.log()&quot;から由来しており、（）の中に入力されたものがスマートフォンやパソコンに出力（表示）されます。
-              <br />
+              企業名の『Dot
+              Log』とは、あるプログラミング言語においてメッセージを出力するために使用される&quot;console.log()&quot;から由来しており、（）の中に入力されたものがスマートフォンやパソコンに出力（表示）されます。
+              <br></br>
               私たちは、わくわくする世界を創るためのアイデアを思いつく限り（　）の中に入れ、世界にどんどん出力していくというミッションを掲げ、日々取り組んでおります。
             </p>
           </AnimatedDiv>
@@ -102,7 +92,7 @@ export default async function Home() {
                     <p className="relation-p1">冒険</p>
                     <p className="relation-p2">adventure</p>
                     <p className="relation-p3">
-                      我々は常にわくわくする方を選び、挑戦を忘れない&quot;アド&quot;ベンチャー企業です。
+                      我々は常にわくわくする方を選び、挑戦を忘れない”アド”ベンチャー企業です。
                     </p>
                   </div>
                   <div className="relationship">
@@ -191,38 +181,9 @@ export default async function Home() {
             </div>
           </AnimatedDiv>
           <AnimatedDiv className="service1 flex" direction="left">
-            {/*           <motion.div
-      className="media1"
-      initial={{ opacity: 1 }}
-      whileInView={{ opacity: 1 }}
-      transition={{ duration: 1, ease: "easeOut" }}
-      viewport={{ once: true }} 
-      style={{
-        width: "937.6px",  // 枠のサイズを固定
-        height: "393px", // 枠のサイズを固定
-        overflow: "hidden",  // 枠からはみ出さないようにする
-        borderRadius: "24px",  // 枠の角を丸くする
-        position: "relative",  // 子要素を位置決めするため
-      }}
-    >
-      <motion.img
-        src="/media.jpg"  // 画像のソース
-        alt="media-img"
-        initial={{ width: "150%", height: "150%" }}  // 初期状態で画像が枠いっぱいに収まる
-        whileInView={{
-          width: "100%",
-          height: "100%",  
-        }}
-        transition={{ duration: 1.0, ease: "easeOut" }}
-        viewport={{ once: true }} 
-        style={{
-          objectFit: "cover",  // 画像が枠内に収まるようにする
-          position: "absolute",  // 画像の位置を絶対に設定
-          top: "0",
-          left: "0",
-        }}
-      />
-    </motion.div> */}
+            <AniMatediV>
+              <Animatediv />
+            </AniMatediV>
             <div className="Alzuchi2">
               <AnimatedDiv>
                 <h3 className="service1-title">SNSメディア</h3>
@@ -238,33 +199,43 @@ export default async function Home() {
           <p className="news1">NEWS</p>
           <div className="news-view1">
             <div className="news-view2">
-              <div className="news-view3">
-                {data.data?.map((item: NewsItem) => {
-                  const fullImageUrl =
-                    process.env.NEXT_PUBLIC_API_URL1 + item.picture[0].url;
-                  return (
-                    <div key={item.id} className="news-box">
-                      <div className="news-pic">
-                        {fullImageUrl && (
-                          <Image
-                            src={fullImageUrl}
-                            alt={item.title}
-                            width={200}
-                            height={150}
-                            className="news-img"
-                          />
-                        )}
+              <AnimatedDiv className="news-view3">
+                {data.data?.map(
+                  (item: {
+                    id: string;
+                    title: string;
+                    publishedAt: string;
+                    picture: Array<{ url: string }>;
+                  }) => {
+                    //pictureが存在すれば、画像を取得
+                    const fullImageUrl =
+                      process.env.NEXT_PUBLIC_API_URL1 + item.picture[0].url;
+                    return (
+                      <div key={item.id} className="news-box">
+                        <div className="news-pic">
+                          {fullImageUrl && (
+                            <Image
+                              src={fullImageUrl}
+                              alt={item.title}
+                              width={200}
+                              height={150}
+                              className="news-img"
+                            />
+                          )}
+                        </div>
+                        <h3 className="item-title">
+                          <a href="/news/[id].tsx">{item.title}</a>
+                        </h3>
+                        <p className="item-publishedAt">
+                          {formatDate(item.publishedAt)}
+                        </p>
                       </div>
-                      <h3 className="item-title">{item.title}</h3>
-                      <p className="item-publishedAt">
-                        {formatDate(item.publishedAt)}
-                      </p>
-                    </div>
-                  );
-                })}
-              </div>
+                    );
+                  }
+                )}
+              </AnimatedDiv>
               <AnimatedDiv className="news-view4">
-                <Link href="/" className="news-view4-a">
+                <Link href="/news" className="news-view4-a">
                   <p className="news-view4-p">VIEW MORE ＞</p>
                 </Link>
               </AnimatedDiv>
